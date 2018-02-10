@@ -1,3 +1,0 @@
-# Referenced at /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:31
--keep class app.androidgrid.faysr.App { <init>(...); }
-
