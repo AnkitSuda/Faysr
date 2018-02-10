@@ -1,0 +1,55 @@
+{
+    "logs": [
+        {
+            "outputFile": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a5422c3d994bef5b23272f27ab2dca7b/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                },
+                {
+                    "source": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/res/values-land/dimens.xml",
+                    "from": {
+                        "startLines": "5,3,1",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "119,66,16",
+                        "endColumns": "59,51,48",
+                        "endOffsets": "174,113,60"
+                    },
+                    "to": {
+                        "startLines": "6,7,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "328,388,440",
+                        "endColumns": "59,51,48",
+                        "endOffsets": "383,435,484"
+                    }
+                },
+                {
+                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d953850468c2d40a75aa94268a1b159/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "489",
+                        "endLines": "12",
+                        "endColumns": "12",
+                        "endOffsets": "666"
+                    }
+                }
+            ]
+        }
+    ]
+}

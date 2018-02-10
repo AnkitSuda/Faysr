@@ -1,0 +1,911 @@
+-- Merging decision tree log ---
+provider#android.support.v4.content.FileProvider
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:212:9-220:20
+	android:grantUriPermissions
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:216:13-47
+	android:authorities
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:214:13-51
+	android:exported
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:215:13-37
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:213:13-67
+manifest
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/f9dbe733083cf6d6328a0b093e0c7e95/AndroidManifest.xml:25:1-35:12
+MERGED from [com.android.databinding:adapters:3.1.0-alpha05] /home/ankit/.gradle/caches/transforms-1/files-1.1/adapters-3.1.0-alpha05.aar/deb506847e3f8c19b2aa371c06c70bef/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.databinding:library:3.1.0-alpha05] /home/ankit/.gradle/caches/transforms-1/files-1.1/library-3.1.0-alpha05.aar/e8e37eb8b53929b3a392bbd4ba44e5c5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.jakewharton.hugo:hugo-runtime:1.2.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/hugo-runtime-1.2.1.aar/8b40152ad28a5fd845b0ada4ba93e4de/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-core:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.2.aar/cf04d9beafc0bcf6bd6fd9d8c1b857c7/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:multidex:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/9ff92d63a38778bfa798631ad5478e8a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/70640a2f70fc91db07ad3c203b039134/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-config:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-11.6.2.aar/ae5fb4579a667dd5db58762ce6e7d21a/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-ads-11.6.2.aar/82bb36940d1335d1dd1bfedae30e5851/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:16:1-30:12
+MERGED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:16:1-30:12
+MERGED from [com.android.support:preference-v14:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/preference-v14-27.0.2.aar/f5727b2a94936e7e1667ff3327dab8dd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.kabouzeid:AndroidSlidingUpPanel:3.3.0-kmod3] /home/ankit/.gradle/caches/transforms-1/files-1.1/AndroidSlidingUpPanel-3.3.0-kmod3.aar/980267b30165e8af9e919b65faf45f34/AndroidManifest.xml:2:1-11:12
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/6ea7f459e9f52d53d4e62881639affad/AndroidManifest.xml:16:6-20:12
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:16:1-35:12
+MERGED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:16:1-47:12
+MERGED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.6.2.aar/b2568d6b7eae3236d3fcb40c3926a4f2/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-11.6.2.aar/b6e7766c809b9b730b3fc918858b3649/AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-gass:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-11.6.2.aar/ea87fb8bffd2bac94d19b2ee2949abab/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:16:1-23:12
+MERGED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:design:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d953850468c2d40a75aa94268a1b159/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:preference-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/preference-v7-27.0.2.aar/a319b459e80a0bdd42e0ff9c2a523cdf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.afollestad.material-dialogs:commons:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/commons-0.9.4.5.aar/869a967c7a2ab7e5a1cb3bd6a102bee6/AndroidManifest.xml:2:1-14:12
+MERGED from [com.afollestad.material-dialogs:core:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/core-0.9.4.5.aar/b617069f416835eade5ddf849d977480/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:support-v13:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-v13-27.0.2.aar/a52b25ba49ec876bf084c950bc244c37/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/c442426cfc43970041d12897ecdfcfe3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.kabouzeid:SeekArc:1.2-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/SeekArc-1.2-kmod.aar/de9f672d9b33c8b038ebe188bb3f9689/AndroidManifest.xml:25:1-37:12
+MERGED from [com.afollestad:material-cab:0.1.12] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-cab-0.1.12.aar/9bda5b406f4c1229105e7521bd2d13ef/AndroidManifest.xml:2:1-14:12
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/library-1.4.1.aar/728010d87ae4e09116061b5da4a67eea/AndroidManifest.xml:6:1-16:12
+MERGED from [com.github.gsotti:EqualizerView:v0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/EqualizerView-v0.2.aar/a6e82e6bcafc42b0d460200ceb5a59a8/AndroidManifest.xml:2:1-17:12
+MERGED from [com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/advrecyclerview-0.11.0.aar/49ed27a81a6be1fd8ccd18c593839d5b/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a5422c3d994bef5b23272f27ab2dca7b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/9df8df03fbfaed799ade06e10ddaa61e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:gridlayout-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-27.0.2.aar/6d6e7cced70e74a0dec48e0771dfdd0b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/c6fabdeb7ae821addc081f7c77df19f5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.kabouzeid:RecyclerView-FastScroll:1.0.16-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/RecyclerView-FastScroll-1.0.16-kmod.aar/e40a8b58ecb104f6733f8e88c3f35130/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.ksoichiro:android-observablescrollview:1.6.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/android-observablescrollview-1.6.0.aar/3bb26d6784b75c380fd4151019a0e726/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/4e7c8b7e70bcec954cf4229d2fab97a3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/67fd17fb6fbd1efa74cbf309b27bf278/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/c12ffc6f8d4a359666090ada37563f1a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:palette-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/palette-v7-27.0.2.aar/4f9abf8b0b0fc155b8b004203e3173c0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:percent:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/percent-27.0.2.aar/662646d9f3c791df07460e43ad9b0156/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/b5cffb48b7a343e8adae7839abfd8803/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/0e5524fab4702a70ab62f5d83e307495/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/042fec601c7faec570f5150cbc033998/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/19a311eb888e77b673ac9386589f71f7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/9348e81d81117ee97cc41fb9178d690a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/19324f9342bf092e6ce0ef5c1ba7d678/AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/af44474554f7619bb37282ac5fcce775/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.shimmer:shimmer:0.1.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/shimmer-0.1.0.aar/b059949a562b58f3235794cad4760011/AndroidManifest.xml:2:1-11:12
+MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:2:1-16:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/3ba7ef84954f03b37e5424039182b820/AndroidManifest.xml:15:1-21:12
+MERGED from [com.google.firebase:firebase-config-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-license-11.6.2.aar/dbed488d0f37bfb44f3b94043fb4ab54/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-license-11.6.2.aar/ae8a7153f31e196fc91661ba5b6314ab/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-perf-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-license-11.6.2.aar/901a87cf410db938d009859f0190aac7/AndroidManifest.xml:2:1-6:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/fa4cc6b48274b0ea7bf2ef378dbd4f8e/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.6.2.aar/c7931b65a14fb6e70d14322703191310/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.6.2.aar/59372776ac18e46707217428461edd6a/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.6.2.aar/94ae1bb79fd120b4eada009472e495fd/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.2.aar/4cf0b209efa75a55246f5480e6a79d9e/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-common-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.6.2.aar/fc66c914cc27b1416bc63653588a9590/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/a716dacf573a29bc318534bf1278a05d/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-ads-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-license-11.6.2.aar/2c89e4db924df48129b2901b7dc75541/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.6.2.aar/1ebb8c1caa15765a2a1e0ee944ae9db1/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-license-11.6.2.aar/f679287204b51528b557c759e6da6149/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-gass-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-license-11.6.2.aar/ad9f7bd8e0f1b1d3d15c7fee1117fffc/AndroidManifest.xml:2:1-6:12
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+	package
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:4:5-36
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:6:5-68
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:6:22-65
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:19:5-66
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.BROADCAST_STICKY
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:11:5-75
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:11:22-72
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:12:5-73
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:12:22-70
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:13:22-78
+uses-permission#com.android.vending.BILLING
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:14:22-64
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:15:5-70
+MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:11:5-71
+MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:15:22-68
+application
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:20:5-269:19
+MERGED from [com.jakewharton.hugo:hugo-runtime:1.2.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/hugo-runtime-1.2.1.aar/8b40152ad28a5fd845b0ada4ba93e4de/AndroidManifest.xml:9:5-20
+MERGED from [com.jakewharton.hugo:hugo-runtime:1.2.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/hugo-runtime-1.2.1.aar/8b40152ad28a5fd845b0ada4ba93e4de/AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-core:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.2.aar/cf04d9beafc0bcf6bd6fd9d8c1b857c7/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.2.aar/cf04d9beafc0bcf6bd6fd9d8c1b857c7/AndroidManifest.xml:5:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/70640a2f70fc91db07ad3c203b039134/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/70640a2f70fc91db07ad3c203b039134/AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-config:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-11.6.2.aar/ae5fb4579a667dd5db58762ce6e7d21a/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-11.6.2.aar/ae5fb4579a667dd5db58762ce6e7d21a/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-ads-11.6.2.aar/82bb36940d1335d1dd1bfedae30e5851/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-ads-11.6.2.aar/82bb36940d1335d1dd1bfedae30e5851/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:23:5-25:19
+MERGED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:23:5-25:19
+MERGED from [com.github.kabouzeid:AndroidSlidingUpPanel:3.3.0-kmod3] /home/ankit/.gradle/caches/transforms-1/files-1.1/AndroidSlidingUpPanel-3.3.0-kmod3.aar/980267b30165e8af9e919b65faf45f34/AndroidManifest.xml:9:5-20
+MERGED from [com.github.kabouzeid:AndroidSlidingUpPanel:3.3.0-kmod3] /home/ankit/.gradle/caches/transforms-1/files-1.1/AndroidSlidingUpPanel-3.3.0-kmod3.aar/980267b30165e8af9e919b65faf45f34/AndroidManifest.xml:9:5-20
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/6ea7f459e9f52d53d4e62881639affad/AndroidManifest.xml:19:5-19
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/6ea7f459e9f52d53d4e62881639affad/AndroidManifest.xml:19:5-19
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:29:5-46:19
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:29:5-46:19
+MERGED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.6.2.aar/b2568d6b7eae3236d3fcb40c3926a4f2/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.6.2.aar/b2568d6b7eae3236d3fcb40c3926a4f2/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:23:5-26:19
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:23:5-26:19
+MERGED from [com.google.android.gms:play-services-gass:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-11.6.2.aar/ea87fb8bffd2bac94d19b2ee2949abab/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gass:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-11.6.2.aar/ea87fb8bffd2bac94d19b2ee2949abab/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:19:5-21:19
+MERGED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:11:5-15:19
+MERGED from [com.afollestad.material-dialogs:commons:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/commons-0.9.4.5.aar/869a967c7a2ab7e5a1cb3bd6a102bee6/AndroidManifest.xml:12:5-20
+MERGED from [com.afollestad.material-dialogs:commons:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/commons-0.9.4.5.aar/869a967c7a2ab7e5a1cb3bd6a102bee6/AndroidManifest.xml:12:5-20
+MERGED from [com.afollestad.material-dialogs:core:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/core-0.9.4.5.aar/b617069f416835eade5ddf849d977480/AndroidManifest.xml:13:5-20
+MERGED from [com.afollestad.material-dialogs:core:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/core-0.9.4.5.aar/b617069f416835eade5ddf849d977480/AndroidManifest.xml:13:5-20
+MERGED from [com.github.kabouzeid:SeekArc:1.2-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/SeekArc-1.2-kmod.aar/de9f672d9b33c8b038ebe188bb3f9689/AndroidManifest.xml:35:5-20
+MERGED from [com.github.kabouzeid:SeekArc:1.2-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/SeekArc-1.2-kmod.aar/de9f672d9b33c8b038ebe188bb3f9689/AndroidManifest.xml:35:5-20
+MERGED from [com.afollestad:material-cab:0.1.12] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-cab-0.1.12.aar/9bda5b406f4c1229105e7521bd2d13ef/AndroidManifest.xml:12:5-20
+MERGED from [com.afollestad:material-cab:0.1.12] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-cab-0.1.12.aar/9bda5b406f4c1229105e7521bd2d13ef/AndroidManifest.xml:12:5-20
+MERGED from [com.github.gsotti:EqualizerView:v0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/EqualizerView-v0.2.aar/a6e82e6bcafc42b0d460200ceb5a59a8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.gsotti:EqualizerView:v0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/EqualizerView-v0.2.aar/a6e82e6bcafc42b0d460200ceb5a59a8/AndroidManifest.xml:11:5-15:19
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/af44474554f7619bb37282ac5fcce775/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/af44474554f7619bb37282ac5fcce775/AndroidManifest.xml:9:5-20
+MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:13:5-14:19
+MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:13:5-14:19
+MERGED from [com.google.firebase:firebase-config-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-license-11.6.2.aar/dbed488d0f37bfb44f3b94043fb4ab54/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-config-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-license-11.6.2.aar/dbed488d0f37bfb44f3b94043fb4ab54/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-license-11.6.2.aar/ae8a7153f31e196fc91661ba5b6314ab/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-license-11.6.2.aar/ae8a7153f31e196fc91661ba5b6314ab/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-perf-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-license-11.6.2.aar/901a87cf410db938d009859f0190aac7/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-perf-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-license-11.6.2.aar/901a87cf410db938d009859f0190aac7/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.6.2.aar/c7931b65a14fb6e70d14322703191310/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.6.2.aar/c7931b65a14fb6e70d14322703191310/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.6.2.aar/59372776ac18e46707217428461edd6a/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.6.2.aar/59372776ac18e46707217428461edd6a/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.6.2.aar/94ae1bb79fd120b4eada009472e495fd/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.6.2.aar/94ae1bb79fd120b4eada009472e495fd/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.2.aar/4cf0b209efa75a55246f5480e6a79d9e/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.2.aar/4cf0b209efa75a55246f5480e6a79d9e/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.6.2.aar/fc66c914cc27b1416bc63653588a9590/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.6.2.aar/fc66c914cc27b1416bc63653588a9590/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/a716dacf573a29bc318534bf1278a05d/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/a716dacf573a29bc318534bf1278a05d/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-license-11.6.2.aar/2c89e4db924df48129b2901b7dc75541/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-license-11.6.2.aar/2c89e4db924df48129b2901b7dc75541/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.6.2.aar/1ebb8c1caa15765a2a1e0ee944ae9db1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.6.2.aar/1ebb8c1caa15765a2a1e0ee944ae9db1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-license-11.6.2.aar/f679287204b51528b557c759e6da6149/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-license-11.6.2.aar/f679287204b51528b557c759e6da6149/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-gass-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-license-11.6.2.aar/ad9f7bd8e0f1b1d3d15c7fee1117fffc/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-gass-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-license-11.6.2.aar/ad9f7bd8e0f1b1d3d15c7fee1117fffc/AndroidManifest.xml:5:5-20
+	android:supportsRtl
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:26:9-35
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:24:9-41
+	tools:ignore
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:28:9-39
+	android:roundIcon
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:25:9-54
+	android:icon
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:23:9-43
+	android:allowBackup
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:22:9-36
+	android:theme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:27:9-54
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:21:9-28
+activity#app.androidgrid.faysr.ui.activities.MainActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:29:9-99:20
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:29:19-61
+intent-filter#android.intent.action.MAIN+android.intent.action.MUSIC_PLAYER+android.intent.category.APP_MUSIC+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:30:13-37:29
+action#android.intent.action.MAIN
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:31:25-66
+action#android.intent.action.MUSIC_PLAYER
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:32:17-77
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:32:25-74
+category#android.intent.category.LAUNCHER
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:34:27-74
+category#android.intent.category.APP_MUSIC
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:35:17-78
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:35:27-75
+category#android.intent.category.DEFAULT
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:36:17-76
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:36:27-73
+intent-filter#android.intent.category.DEFAULT+android.media.action.MEDIA_PLAY_FROM_SEARCH
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:38:13-42:29
+action#android.media.action.MEDIA_PLAY_FROM_SEARCH
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:39:17-86
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:39:25-83
+intent-filter#android.intent.action.VIEW+android.intent.category.DEFAULT
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:43:13-53:29
+action#android.intent.action.VIEW
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:44:17-69
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:44:25-66
+data
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:48:17-50
+	android:scheme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:48:23-47
+	android:mimeType
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:49:23-49
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:65:13-76:29
+category#android.intent.category.BROWSABLE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:69:17-78
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:69:27-75
+intent-filter#android.intent.category.DEFAULT+com.cyanogenmod.eleven.AUDIO_PLAYER
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:86:13-90:29
+action#com.cyanogenmod.eleven.AUDIO_PLAYER
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:87:17-78
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:87:25-75
+intent-filter#android.intent.action.PICK+android.intent.category.DEFAULT+android.intent.category.OPENABLE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:91:13-98:29
+action#android.intent.action.PICK
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:92:17-69
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:92:25-66
+category#android.intent.category.OPENABLE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:95:17-77
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:95:27-74
+activity#app.androidgrid.faysr.ui.activities.AlbumDetailActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:100:9-71
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:100:19-68
+activity#app.androidgrid.faysr.ui.activities.ArtistDetailActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:101:9-72
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:101:19-69
+activity#app.androidgrid.faysr.ui.activities.PlaylistDetailActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:102:9-74
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:102:19-71
+activity#app.androidgrid.faysr.ui.activities.tageditor.SongTagEditorActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:103:9-105:58
+	android:windowSoftInputMode
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:105:13-55
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:104:13-74
+activity#app.androidgrid.faysr.ui.activities.tageditor.AlbumTagEditorActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:106:9-108:58
+	android:windowSoftInputMode
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:108:13-55
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:107:13-75
+activity#app.androidgrid.faysr.ui.activities.SearchActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:109:9-66
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:109:19-63
+activity#app.androidgrid.faysr.ui.activities.SettingsActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:110:9-112:55
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:112:13-52
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:111:13-59
+activity#app.androidgrid.faysr.ui.activities.AboutActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:113:9-115:52
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:115:13-49
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:114:13-56
+activity#app.androidgrid.faysr.ui.activities.intro.AppIntroActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:116:9-119:50
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:118:13-48
+	android:theme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:119:13-47
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:117:13-65
+activity#app.androidgrid.faysr.ui.activities.bugreport.BugReportActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:120:9-122:55
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:122:13-52
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:121:13-70
+activity#app.androidgrid.faysr.appshortcuts.AppShortcutLauncherActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:123:9-126:75
+	android:launchMode
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:125:13-48
+	android:theme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:126:13-72
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:124:13-69
+service#app.androidgrid.faysr.service.MusicService
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:128:9-130:38
+	android:enabled
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:130:13-35
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:129:13-49
+receiver#app.androidgrid.faysr.service.MediaButtonIntentReceiver
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:132:9-136:20
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:132:19-68
+intent-filter#android.intent.action.MEDIA_BUTTON
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:133:13-135:29
+action#android.intent.action.MEDIA_BUTTON
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:134:17-77
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:134:25-74
+meta-data#android.max_aspect
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:138:9-140:35
+	android:value
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:140:13-32
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:139:13-46
+meta-data#com.lge.support.SPLIT_WINDOW
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:141:9-143:36
+	android:value
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:143:13-33
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:142:13-56
+meta-data#com.crashlytics.ApiKey
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:144:9-146:72
+	android:value
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:146:13-69
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:145:13-50
+meta-data#app.androidgrid.faysr.glide.FaysrGlideModule
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:147:9-149:43
+	android:value
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:149:13-40
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:148:13-72
+meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:150:9-152:43
+	android:value
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:152:13-40
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:151:13-84
+receiver#app.androidgrid.faysr.appwidgets.BootReceiver
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:155:9-160:20
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:155:19-58
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:156:13-159:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:157:17-79
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:157:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:158:17-82
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:158:25-79
+receiver#app.androidgrid.faysr.appwidgets.AppWidgetBig
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:161:9-172:20
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:164:13-56
+	android:exported
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:163:13-37
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:162:13-52
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:165:13-167:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:166:17-84
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:166:25-81
+meta-data#android.appwidget.provider
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:169:13-171:63
+	android:resource
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:171:17-60
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:170:17-58
+receiver#app.androidgrid.faysr.appwidgets.AppWidgetClassic
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:173:9-184:20
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:176:13-60
+	android:exported
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:175:13-37
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:174:13-56
+receiver#app.androidgrid.faysr.appwidgets.AppWidgetSmall
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:185:9-196:20
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:188:13-58
+	android:exported
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:187:13-37
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:186:13-54
+receiver#app.androidgrid.faysr.appwidgets.AppWidgetCard
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:197:9-208:20
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:200:13-57
+	android:exported
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:199:13-37
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:198:13-53
+activity#app.androidgrid.faysr.ui.activities.PurchaseActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:210:9-68
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:210:19-65
+activity#app.androidgrid.faysr.ui.activities.under_development.UnderDevelopmentActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:222:9-224:61
+	android:theme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:224:13-58
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:223:13-85
+activity#app.androidgrid.faysr.editor.RingdroidSelectActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:227:9-239:20
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:229:13-56
+	android:theme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:230:13-52
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:228:13-59
+intent-filter#android.intent.action.GET_CONTENT+android.intent.category.DEFAULT+android.intent.category.OPENABLE
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:231:13-238:29
+action#android.intent.action.GET_CONTENT
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:232:17-76
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:232:25-73
+activity#app.androidgrid.faysr.editor.RingdroidEditActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:247:9-258:20
+	android:hardwareAccelerated
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:250:13-47
+	android:windowSoftInputMode
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:252:13-55
+	android:configChanges
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:249:13-74
+	android:theme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:251:13-52
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:248:13-57
+intent-filter#android.intent.action.EDIT
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:253:13-257:29
+	android:label
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:253:28-63
+action#android.intent.action.EDIT
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:254:17-69
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:254:25-66
+activity#app.androidgrid.faysr.editor.ChooseContactActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:261:9-263:66
+	android:configChanges
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:263:13-63
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:262:13-57
+activity#app.androidgrid.faysr.editor.FaysrSongTrimActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:264:9-266:66
+	android:theme
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:266:13-63
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:265:13-57
+activity#app.androidgrid.faysr.ui.activities.SupportDevelopmentActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:267:9-78
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:267:19-75
+activity#app.androidgrid.faysr.ui.activities.PlayingQueueActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:268:9-81
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:268:19-69
+uses-sdk
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/f9dbe733083cf6d6328a0b093e0c7e95/AndroidManifest.xml:31:5-33:41
+MERGED from [com.heinrichreimersoftware:material-intro:1.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/f9dbe733083cf6d6328a0b093e0c7e95/AndroidManifest.xml:31:5-33:41
+MERGED from [com.android.databinding:adapters:3.1.0-alpha05] /home/ankit/.gradle/caches/transforms-1/files-1.1/adapters-3.1.0-alpha05.aar/deb506847e3f8c19b2aa371c06c70bef/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:adapters:3.1.0-alpha05] /home/ankit/.gradle/caches/transforms-1/files-1.1/adapters-3.1.0-alpha05.aar/deb506847e3f8c19b2aa371c06c70bef/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.1.0-alpha05] /home/ankit/.gradle/caches/transforms-1/files-1.1/library-3.1.0-alpha05.aar/e8e37eb8b53929b3a392bbd4ba44e5c5/AndroidManifest.xml:22:5-44
+MERGED from [com.android.databinding:library:3.1.0-alpha05] /home/ankit/.gradle/caches/transforms-1/files-1.1/library-3.1.0-alpha05.aar/e8e37eb8b53929b3a392bbd4ba44e5c5/AndroidManifest.xml:22:5-44
+MERGED from [com.jakewharton.hugo:hugo-runtime:1.2.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/hugo-runtime-1.2.1.aar/8b40152ad28a5fd845b0ada4ba93e4de/AndroidManifest.xml:7:5-43
+MERGED from [com.jakewharton.hugo:hugo-runtime:1.2.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/hugo-runtime-1.2.1.aar/8b40152ad28a5fd845b0ada4ba93e4de/AndroidManifest.xml:7:5-43
+MERGED from [com.google.firebase:firebase-core:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.2.aar/cf04d9beafc0bcf6bd6fd9d8c1b857c7/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-core-11.6.2.aar/cf04d9beafc0bcf6bd6fd9d8c1b857c7/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:multidex:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/9ff92d63a38778bfa798631ad5478e8a/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/9ff92d63a38778bfa798631ad5478e8a/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/70640a2f70fc91db07ad3c203b039134/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/70640a2f70fc91db07ad3c203b039134/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-config:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-11.6.2.aar/ae5fb4579a667dd5db58762ce6e7d21a/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-11.6.2.aar/ae5fb4579a667dd5db58762ce6e7d21a/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-ads-11.6.2.aar/82bb36940d1335d1dd1bfedae30e5851/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-ads-11.6.2.aar/82bb36940d1335d1dd1bfedae30e5851/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:21:5-43
+MERGED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:preference-v14:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/preference-v14-27.0.2.aar/f5727b2a94936e7e1667ff3327dab8dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v14:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/preference-v14-27.0.2.aar/f5727b2a94936e7e1667ff3327dab8dd/AndroidManifest.xml:20:5-44
+MERGED from [com.github.kabouzeid:AndroidSlidingUpPanel:3.3.0-kmod3] /home/ankit/.gradle/caches/transforms-1/files-1.1/AndroidSlidingUpPanel-3.3.0-kmod3.aar/980267b30165e8af9e919b65faf45f34/AndroidManifest.xml:7:5-43
+MERGED from [com.github.kabouzeid:AndroidSlidingUpPanel:3.3.0-kmod3] /home/ankit/.gradle/caches/transforms-1/files-1.1/AndroidSlidingUpPanel-3.3.0-kmod3.aar/980267b30165e8af9e919b65faf45f34/AndroidManifest.xml:7:5-43
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/6ea7f459e9f52d53d4e62881639affad/AndroidManifest.xml:18:5-72
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/6ea7f459e9f52d53d4e62881639affad/AndroidManifest.xml:18:5-72
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.6.2.aar/b2568d6b7eae3236d3fcb40c3926a4f2/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.6.2.aar/b2568d6b7eae3236d3fcb40c3926a4f2/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-11.6.2.aar/b6e7766c809b9b730b3fc918858b3649/AndroidManifest.xml:17:5-94
+MERGED from [com.google.android.gms:play-services-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-11.6.2.aar/b6e7766c809b9b730b3fc918858b3649/AndroidManifest.xml:17:5-94
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-gass:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-11.6.2.aar/ea87fb8bffd2bac94d19b2ee2949abab/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gass:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-11.6.2.aar/ea87fb8bffd2bac94d19b2ee2949abab/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:17:5-43
+MERGED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d953850468c2d40a75aa94268a1b159/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d953850468c2d40a75aa94268a1b159/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/preference-v7-27.0.2.aar/a319b459e80a0bdd42e0ff9c2a523cdf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:preference-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/preference-v7-27.0.2.aar/a319b459e80a0bdd42e0ff9c2a523cdf/AndroidManifest.xml:20:5-44
+MERGED from [com.afollestad.material-dialogs:commons:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/commons-0.9.4.5.aar/869a967c7a2ab7e5a1cb3bd6a102bee6/AndroidManifest.xml:8:5-10:41
+MERGED from [com.afollestad.material-dialogs:commons:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/commons-0.9.4.5.aar/869a967c7a2ab7e5a1cb3bd6a102bee6/AndroidManifest.xml:8:5-10:41
+MERGED from [com.afollestad.material-dialogs:core:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/core-0.9.4.5.aar/b617069f416835eade5ddf849d977480/AndroidManifest.xml:8:5-11:75
+MERGED from [com.afollestad.material-dialogs:core:0.9.4.5] /home/ankit/.gradle/caches/transforms-1/files-1.1/core-0.9.4.5.aar/b617069f416835eade5ddf849d977480/AndroidManifest.xml:8:5-11:75
+MERGED from [com.android.support:support-v13:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-v13-27.0.2.aar/a52b25ba49ec876bf084c950bc244c37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-v13-27.0.2.aar/a52b25ba49ec876bf084c950bc244c37/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/c442426cfc43970041d12897ecdfcfe3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/c442426cfc43970041d12897ecdfcfe3/AndroidManifest.xml:20:5-44
+MERGED from [com.github.kabouzeid:SeekArc:1.2-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/SeekArc-1.2-kmod.aar/de9f672d9b33c8b038ebe188bb3f9689/AndroidManifest.xml:31:5-33:41
+MERGED from [com.github.kabouzeid:SeekArc:1.2-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/SeekArc-1.2-kmod.aar/de9f672d9b33c8b038ebe188bb3f9689/AndroidManifest.xml:31:5-33:41
+MERGED from [com.afollestad:material-cab:0.1.12] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-cab-0.1.12.aar/9bda5b406f4c1229105e7521bd2d13ef/AndroidManifest.xml:8:5-10:41
+MERGED from [com.afollestad:material-cab:0.1.12] /home/ankit/.gradle/caches/transforms-1/files-1.1/material-cab-0.1.12.aar/9bda5b406f4c1229105e7521bd2d13ef/AndroidManifest.xml:8:5-10:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/library-1.4.1.aar/728010d87ae4e09116061b5da4a67eea/AndroidManifest.xml:12:5-14:41
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/library-1.4.1.aar/728010d87ae4e09116061b5da4a67eea/AndroidManifest.xml:12:5-14:41
+MERGED from [com.github.gsotti:EqualizerView:v0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/EqualizerView-v0.2.aar/a6e82e6bcafc42b0d460200ceb5a59a8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.gsotti:EqualizerView:v0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/EqualizerView-v0.2.aar/a6e82e6bcafc42b0d460200ceb5a59a8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/advrecyclerview-0.11.0.aar/49ed27a81a6be1fd8ccd18c593839d5b/AndroidManifest.xml:23:5-25:41
+MERGED from [com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/advrecyclerview-0.11.0.aar/49ed27a81a6be1fd8ccd18c593839d5b/AndroidManifest.xml:23:5-25:41
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a5422c3d994bef5b23272f27ab2dca7b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a5422c3d994bef5b23272f27ab2dca7b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/9df8df03fbfaed799ade06e10ddaa61e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/9df8df03fbfaed799ade06e10ddaa61e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-27.0.2.aar/6d6e7cced70e74a0dec48e0771dfdd0b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:gridlayout-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-27.0.2.aar/6d6e7cced70e74a0dec48e0771dfdd0b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/c6fabdeb7ae821addc081f7c77df19f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/c6fabdeb7ae821addc081f7c77df19f5/AndroidManifest.xml:20:5-44
+MERGED from [com.github.kabouzeid:RecyclerView-FastScroll:1.0.16-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/RecyclerView-FastScroll-1.0.16-kmod.aar/e40a8b58ecb104f6733f8e88c3f35130/AndroidManifest.xml:7:5-44
+MERGED from [com.github.kabouzeid:RecyclerView-FastScroll:1.0.16-kmod] /home/ankit/.gradle/caches/transforms-1/files-1.1/RecyclerView-FastScroll-1.0.16-kmod.aar/e40a8b58ecb104f6733f8e88c3f35130/AndroidManifest.xml:7:5-44
+MERGED from [com.github.ksoichiro:android-observablescrollview:1.6.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/android-observablescrollview-1.6.0.aar/3bb26d6784b75c380fd4151019a0e726/AndroidManifest.xml:21:5-43
+MERGED from [com.github.ksoichiro:android-observablescrollview:1.6.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/android-observablescrollview-1.6.0.aar/3bb26d6784b75c380fd4151019a0e726/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/4e7c8b7e70bcec954cf4229d2fab97a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/4e7c8b7e70bcec954cf4229d2fab97a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/67fd17fb6fbd1efa74cbf309b27bf278/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/67fd17fb6fbd1efa74cbf309b27bf278/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/c12ffc6f8d4a359666090ada37563f1a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/c12ffc6f8d4a359666090ada37563f1a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/palette-v7-27.0.2.aar/4f9abf8b0b0fc155b8b004203e3173c0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/palette-v7-27.0.2.aar/4f9abf8b0b0fc155b8b004203e3173c0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:percent:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/percent-27.0.2.aar/662646d9f3c791df07460e43ad9b0156/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:percent:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/percent-27.0.2.aar/662646d9f3c791df07460e43ad9b0156/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/b5cffb48b7a343e8adae7839abfd8803/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/b5cffb48b7a343e8adae7839abfd8803/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/0e5524fab4702a70ab62f5d83e307495/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/0e5524fab4702a70ab62f5d83e307495/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/042fec601c7faec570f5150cbc033998/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/042fec601c7faec570f5150cbc033998/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/19a311eb888e77b673ac9386589f71f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/19a311eb888e77b673ac9386589f71f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/9348e81d81117ee97cc41fb9178d690a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/9348e81d81117ee97cc41fb9178d690a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/19324f9342bf092e6ce0ef5c1ba7d678/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/19324f9342bf092e6ce0ef5c1ba7d678/AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/af44474554f7619bb37282ac5fcce775/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/af44474554f7619bb37282ac5fcce775/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.shimmer:shimmer:0.1.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/shimmer-0.1.0.aar/b059949a562b58f3235794cad4760011/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.shimmer:shimmer:0.1.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/shimmer-0.1.0.aar/b059949a562b58f3235794cad4760011/AndroidManifest.xml:7:5-9:41
+MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:7:5-9:41
+MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:7:5-9:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/3ba7ef84954f03b37e5424039182b820/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/ankit/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/3ba7ef84954f03b37e5424039182b820/AndroidManifest.xml:19:5-43
+MERGED from [com.google.firebase:firebase-config-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-license-11.6.2.aar/dbed488d0f37bfb44f3b94043fb4ab54/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-config-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-config-license-11.6.2.aar/dbed488d0f37bfb44f3b94043fb4ab54/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-license-11.6.2.aar/ae8a7153f31e196fc91661ba5b6314ab/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-messaging-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-license-11.6.2.aar/ae8a7153f31e196fc91661ba5b6314ab/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-perf-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-license-11.6.2.aar/901a87cf410db938d009859f0190aac7/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-perf-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-license-11.6.2.aar/901a87cf410db938d009859f0190aac7/AndroidManifest.xml:4:5-43
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/fa4cc6b48274b0ea7bf2ef378dbd4f8e/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/ankit/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/fa4cc6b48274b0ea7bf2ef378dbd4f8e/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.6.2.aar/c7931b65a14fb6e70d14322703191310/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.6.2.aar/c7931b65a14fb6e70d14322703191310/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.6.2.aar/59372776ac18e46707217428461edd6a/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.6.2.aar/59372776ac18e46707217428461edd6a/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.6.2.aar/94ae1bb79fd120b4eada009472e495fd/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.6.2.aar/94ae1bb79fd120b4eada009472e495fd/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.2.aar/4cf0b209efa75a55246f5480e6a79d9e/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.2.aar/4cf0b209efa75a55246f5480e6a79d9e/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.6.2.aar/fc66c914cc27b1416bc63653588a9590/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.6.2.aar/fc66c914cc27b1416bc63653588a9590/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/a716dacf573a29bc318534bf1278a05d/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.6.2.aar/a716dacf573a29bc318534bf1278a05d/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-license-11.6.2.aar/2c89e4db924df48129b2901b7dc75541/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-license-11.6.2.aar/2c89e4db924df48129b2901b7dc75541/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.6.2.aar/1ebb8c1caa15765a2a1e0ee944ae9db1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.6.2.aar/1ebb8c1caa15765a2a1e0ee944ae9db1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-license-11.6.2.aar/f679287204b51528b557c759e6da6149/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-license-11.6.2.aar/f679287204b51528b557c759e6da6149/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-gass-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-license-11.6.2.aar/ad9f7bd8e0f1b1d3d15c7fee1117fffc/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-gass-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-license-11.6.2.aar/ad9f7bd8e0f1b1d3d15c7fee1117fffc/AndroidManifest.xml:4:5-43
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.google.android.gms:play-services-ads:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-11.6.2.aar/b6e7766c809b9b730b3fc918858b3649/AndroidManifest.xml:17:42-92
+	android:targetSdkVersion
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:217:13-219:58
+	android:resource
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:219:17-55
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:218:17-67
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:23:18-87
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:25:25-75
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:19:5-97
+	android:name
+		ADDED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:19:22-95
+provider#com.google.firebase.perf.provider.FirebasePerfProvider
+ADDED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:24:9-199
+	android:authorities
+		ADDED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:24:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:24:149-173
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:24:174-197
+	android:name
+		ADDED from [com.google.firebase:firebase-perf:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-perf-11.6.2.aar/b0467af3871ba507aa738acae8a4d020/AndroidManifest.xml:24:79-148
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:27:162-184
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:27:185-208
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.6.2.aar/5dd25302fbe6207b8885e7ce75ae7ff8/AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:32:16-87
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:33:7-197
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:33:148-170
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:33:171-195
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:33:91-147
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.6.2.aar/cfdba4ca4946696c5661b221d478c545/AndroidManifest.xml:33:16-90
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/954a2fadca9e7b9757bd11e738311679/AndroidManifest.xml:19:19-85
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:23:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:25:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:25:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:25:17-71
+permission#app.androidgrid.faysr.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:25:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:25:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:25:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:27:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:27:22-76
+uses-permission#app.androidgrid.faysr.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:27:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:27:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:31:9-36:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:31:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:31:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:31:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:32:13-35:29
+intent-filter#app.androidgrid.faysr+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:32:13-35:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:33:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:33:25-78
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:34:27-58
+category#app.androidgrid.faysr
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:34:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:34:27-58
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:40:9-44:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:40:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:40:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:41:13-43:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:41:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:42:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.6.2.aar/02e225bf189d39196da68b11f6e116d1/AndroidManifest.xml:42:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-common-11.6.2.aar/44f72464cb6af747e81a8841dcbdc4f5/AndroidManifest.xml:6:79-143
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:25:9-257
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:25:231-255
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:25:72-181
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:25:182-230
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-11.6.2.aar/2eedecac913b5eb07e426db17c1cfddb/AndroidManifest.xml:25:19-71
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/f4c5d64f6c92c7d9d9a8d76bfff47f40/AndroidManifest.xml:20:20-65
+activity#com.kabouzeid.appthemehelper.common.ATHToolbarActivity
+ADDED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:12:9-91
+	android:name
+		ADDED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:12:19-88
+activity#com.kabouzeid.appthemehelper.ATHActivity
+ADDED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:13:9-77
+	android:name
+		ADDED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:13:19-74
+activity#com.kabouzeid.appthemehelper.common.ATHActionBarActivity
+ADDED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:14:9-93
+	android:name
+		ADDED from [com.github.kabouzeid:app-theme-helper:1.3.7] /home/ankit/.gradle/caches/transforms-1/files-1.1/app-theme-helper-1.3.7.aar/2ddd9bd5a400ffac2619068e42531882/AndroidManifest.xml:14:19-90

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginRight="-1dp"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="1dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--ImageView
+             android:id="@+id/bkgnd"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:scaleType="centerCrop"
+             android:src="@drawable/bkgnd"-->
+
+            <app.androidgrid.faysr.editor.WaveformView
+                android:id="@+id/waveform"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <app.androidgrid.faysr.editor.MarkerView
+                android:id="@+id/startmarker"
+                android:nextFocusDown="@+id/endmarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/marker_left"
+                android:paddingStart="-6dp"
+                android:paddingRight="0dp"
+                android:paddingLeft="-6dp"
+                android:paddingEnd="0dp"
+                android:contentDescription="@string/start_marker" />
+
+            <app.androidgrid.faysr.editor.MarkerView
+                android:id="@+id/endmarker"
+                android:nextFocusUp="@+id/startmarker"
+                android:nextFocusDown="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:paddingRight="-6dp"
+                android:paddingLeft="0dp"
+                android:paddingEnd="-6dp"
+                android:src="@drawable/marker_right"
+                android:contentDescription="@string/end_marker" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/info"
+        android:nextFocusUp="@+id/endmarker"
+        android:nextFocusDown="@+id/play"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/AudioFileInfoOverlayText"
+        android:visibility="gone"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/starttext"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/md_black_1000"
+                android:textAlignment="center"
+                android:scaleType="fitCenter"
+                android:text="0:00"
+                android:layout_gravity="center"
+                android:background="@drawable/round_selector"
+                tools:ignore="MissingPrefix" />
+
+            <ImageButton
+                android:id="@+id/rew"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="-8dp"
+                android:layout_marginRight="-8dp"
+                android:layout_toLeftOf="@+id/play"
+                android:layout_toStartOf="@+id/play"
+                android:background="?attr/roundSelector"
+                android:padding="22dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:tint="@color/md_black_1000"
+                app:srcCompat="@drawable/ic_skip_previous_white_24dp"
+                tools:ignore="MissingPrefix" />
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerInParent="true"
+                android:background="?attr/roundSelector"
+                android:padding="22dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                tools:ignore="MissingPrefix"
+                android:tint="@color/md_black_1000"
+                tools:src="@drawable/ic_pause_white_24dp" />
+            <ImageButton
+                android:id="@+id/ffwd"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-8dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-8dp"
+                android:layout_toEndOf="@+id/play"
+                android:layout_toRightOf="@+id/play"
+                android:background="?attr/roundSelector"
+                android:padding="22dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/md_black_1000"
+                app:srcCompat="@drawable/ic_skip_next_white_24dp"
+                tools:ignore="MissingPrefix" />
+
+
+
+            <EditText
+                android:id="@+id/endtext"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/md_black_1000"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="0:00"
+                android:layout_gravity="center"
+                android:background="@drawable/round_selector"
+                android:textAlignment="center"
+                android:scaleType="fitCenter"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/trim_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save_button"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:textAlignment="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/trim_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:maxLines="1"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:text="@string/menu_reset"
+                android:textAlignment="center"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/trim_close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:maxLines="1"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:text="@string/notices_close"
+                android:textAlignment="center"
+                android:textColor="@color/md_black_1000"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

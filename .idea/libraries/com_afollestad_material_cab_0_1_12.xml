@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.afollestad:material-cab-0.1.12">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-cab-0.1.12.aar/d8838e9dce148e48688ebff5474257ff/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-cab-0.1.12.aar/d8838e9dce148e48688ebff5474257ff/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.afollestad/material-cab/0.1.12/4ca422bbed1f263346716c8ebf4605416be88419/material-cab-0.1.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

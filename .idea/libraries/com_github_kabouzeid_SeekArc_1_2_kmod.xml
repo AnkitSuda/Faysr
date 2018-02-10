@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.github.kabouzeid:SeekArc-1.2-kmod">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/SeekArc-1.2-kmod.aar/df5c1553043dceae39d70ab9a5db419e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/SeekArc-1.2-kmod.aar/df5c1553043dceae39d70ab9a5db419e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

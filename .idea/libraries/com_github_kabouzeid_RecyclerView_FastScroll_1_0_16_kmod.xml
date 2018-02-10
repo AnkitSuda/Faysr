@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.github.kabouzeid:RecyclerView-FastScroll-1.0.16-kmod">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/RecyclerView-FastScroll-1.0.16-kmod.aar/15ab46e2758ea246881b569ce32cf695/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/RecyclerView-FastScroll-1.0.16-kmod.aar/15ab46e2758ea246881b569ce32cf695/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

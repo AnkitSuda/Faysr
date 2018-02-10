@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "301715486493",
+    "firebase_url": "https://faysr-5e6cc.firebaseio.com",
+    "project_id": "faysr-5e6cc",
+    "storage_bucket": "faysr-5e6cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301715486493:android:58961b198959fd8a",
+        "android_client_info": {
+          "package_name": "app.androidgrid.faysr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301715486493-v666e87jcr90iukf2gm4g94hqpqhuh46.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.androidgrid.faysr",
+            "certificate_hash": "9f5f882fb4835d1b759f8c3d9e0d4c531180794b"
+          }
+        },
+        {
+          "client_id": "301715486493-kl5titjomh3hnah1562g2i2q6a243ocv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD85gPB3ps-zIOx0qp-N8S5iQZFStK60cQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301715486493-kl5titjomh3hnah1562g2i2q6a243ocv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

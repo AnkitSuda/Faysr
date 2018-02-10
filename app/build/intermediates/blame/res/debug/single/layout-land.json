@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-land/mi_fragment_simple_slide_scrollable.xml",
+        "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/f9dbe733083cf6d6328a0b093e0c7e95/res/layout-land/mi_fragment_simple_slide_scrollable.xml"
+    },
+    {
+        "merged": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout-land/mi_fragment_simple_slide.xml",
+        "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/material-intro-1.6.2.aar/f9dbe733083cf6d6328a0b093e0c7e95/res/layout-land/mi_fragment_simple_slide.xml"
+    }
+]
