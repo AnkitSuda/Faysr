@@ -10,6 +10,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.internal.ThemeSingleton;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import app.androidgrid.faysr.App;
+import app.androidgrid.faysr.EmptyActivity;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.dialogs.ChangelogDialog;
 import app.androidgrid.faysr.dialogs.DonationsDialog;
@@ -87,6 +89,9 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     @BindView(R.id.rate_on_google_play)
     LinearLayout rateOnGooglePlay;
 
+    @BindView(R.id.logo)
+    ImageView logo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +104,15 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         setTaskDescriptionColorAuto();
 
         setUpViews();
+
+        logo.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(AboutActivity.this, EmptyActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        });
     }
 
     private void setUpViews() {

@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.view.View;
+import android.view.Window;
 
 import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.ThemeStore;
@@ -12,8 +13,11 @@ import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialDialogsUtil;
 import app.androidgrid.faysr.R;
+import app.androidgrid.faysr.util.NavigationUtil;
 import app.androidgrid.faysr.util.PreferenceUtil;
 import app.androidgrid.faysr.util.Util;
+
+import static android.view.WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)
@@ -81,7 +85,20 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
 
     public void setNavigationbarColor(int color) {
         if (ThemeStore.coloredNavigationBar(this)) {
-            ATH.setNavigationbarColor(this, color);
+            if (ColorUtil.isColorLight(color)) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    View view = new View(this);
+                    /*Window window = getWindow();
+                    window.requestFeature(FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);*/
+                    view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+                } else {
+                    ATH.setNavigationbarColor(this, ColorUtil.shiftColor(color, 0.8f));
+                    return;
+                }
+                ATH.setNavigationbarColor(this, ColorUtil.shiftColor(color, 0.8f));
+            } else {
+                ATH.setNavigationbarColor(this, color);
+            }
         } else {
             ATH.setNavigationbarColor(this, Color.BLACK);
         }

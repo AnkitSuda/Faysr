@@ -1,15 +1,15 @@
 -- Merging decision tree log ---
 provider#android.support.v4.content.FileProvider
-INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:212:9-220:20
+INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:211:9-219:20
 	android:grantUriPermissions
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:216:13-47
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:215:13-47
 	android:authorities
 		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:214:13-51
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:213:13-51
 	android:exported
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:215:13-37
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:214:13-37
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:213:13-67
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:212:13-67
 manifest
 ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
 INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:2:1-271:12
@@ -166,7 +166,7 @@ ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidMani
 	android:name
 		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:14:22-64
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:15:5-70
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:15:5-71
 MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:11:5-71
 MERGED from [com.chibde:audiovisualizer:2.0.0] /home/ankit/.gradle/caches/transforms-1/files-1.1/audiovisualizer-2.0.0.aar/5f13e815b75087584dab24c967f02204/AndroidManifest.xml:11:5-71
 	android:name
@@ -252,317 +252,319 @@ MERGED from [com.google.android.gms:play-services-ads-lite-license:11.6.2] /home
 MERGED from [com.google.android.gms:play-services-gass-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-license-11.6.2.aar/ad9f7bd8e0f1b1d3d15c7fee1117fffc/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-gass-license:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/play-services-gass-license-11.6.2.aar/ad9f7bd8e0f1b1d3d15c7fee1117fffc/AndroidManifest.xml:5:5-20
 	android:supportsRtl
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:26:9-35
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:25:9-35
 	android:label
 		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:24:9-41
 	tools:ignore
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:28:9-39
-	android:roundIcon
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:25:9-54
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:27:9-39
 	android:icon
 		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:23:9-43
 	android:allowBackup
 		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:22:9-36
 	android:theme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:27:9-54
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:26:9-54
 	android:name
 		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:21:9-28
 activity#app.androidgrid.faysr.ui.activities.MainActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:29:9-99:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:28:9-98:20
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:29:19-61
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:28:19-61
 intent-filter#android.intent.action.MAIN+android.intent.action.MUSIC_PLAYER+android.intent.category.APP_MUSIC+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:30:13-37:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:29:13-36:29
 action#android.intent.action.MAIN
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:31:17-69
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:31:25-66
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:30:25-66
 action#android.intent.action.MUSIC_PLAYER
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:32:17-77
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:32:25-74
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:31:25-74
 category#android.intent.category.LAUNCHER
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:34:17-77
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:34:27-74
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:33:27-74
 category#android.intent.category.APP_MUSIC
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:35:17-78
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:34:17-78
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:35:27-75
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:34:27-75
 category#android.intent.category.DEFAULT
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:36:17-76
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:35:17-76
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:36:27-73
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:35:27-73
 intent-filter#android.intent.category.DEFAULT+android.media.action.MEDIA_PLAY_FROM_SEARCH
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:38:13-42:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:37:13-41:29
 action#android.media.action.MEDIA_PLAY_FROM_SEARCH
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:39:17-86
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:38:17-86
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:39:25-83
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:38:25-83
 intent-filter#android.intent.action.VIEW+android.intent.category.DEFAULT
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:43:13-53:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:42:13-52:29
 action#android.intent.action.VIEW
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:44:17-69
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:44:25-66
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:43:25-66
 data
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:48:17-50
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:47:17-50
 	android:scheme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:48:23-47
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:47:23-47
 	android:mimeType
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:49:23-49
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:48:23-49
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:65:13-76:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:64:13-75:29
 category#android.intent.category.BROWSABLE
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:69:17-78
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:68:17-78
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:69:27-75
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:68:27-75
 intent-filter#android.intent.category.DEFAULT+com.cyanogenmod.eleven.AUDIO_PLAYER
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:86:13-90:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:85:13-89:29
 action#com.cyanogenmod.eleven.AUDIO_PLAYER
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:87:17-78
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:86:17-78
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:87:25-75
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:86:25-75
 intent-filter#android.intent.action.PICK+android.intent.category.DEFAULT+android.intent.category.OPENABLE
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:91:13-98:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:90:13-97:29
 action#android.intent.action.PICK
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:92:17-69
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:91:17-69
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:92:25-66
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:91:25-66
 category#android.intent.category.OPENABLE
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:95:17-77
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:94:17-77
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:95:27-74
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:94:27-74
 activity#app.androidgrid.faysr.ui.activities.AlbumDetailActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:100:9-71
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:99:9-71
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:100:19-68
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:99:19-68
 activity#app.androidgrid.faysr.ui.activities.ArtistDetailActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:101:9-72
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:100:9-72
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:101:19-69
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:100:19-69
 activity#app.androidgrid.faysr.ui.activities.PlaylistDetailActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:102:9-74
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:101:9-74
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:102:19-71
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:101:19-71
 activity#app.androidgrid.faysr.ui.activities.tageditor.SongTagEditorActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:103:9-105:58
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:102:9-104:58
 	android:windowSoftInputMode
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:105:13-55
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:104:13-55
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:104:13-74
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:103:13-74
 activity#app.androidgrid.faysr.ui.activities.tageditor.AlbumTagEditorActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:106:9-108:58
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:105:9-107:58
 	android:windowSoftInputMode
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:108:13-55
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:107:13-55
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:107:13-75
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:106:13-75
 activity#app.androidgrid.faysr.ui.activities.SearchActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:109:9-66
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:108:9-66
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:109:19-63
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:108:19-63
 activity#app.androidgrid.faysr.ui.activities.SettingsActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:110:9-112:55
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:109:9-111:55
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:112:13-52
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:111:13-52
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:111:13-59
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:110:13-59
 activity#app.androidgrid.faysr.ui.activities.AboutActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:113:9-115:52
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:112:9-114:52
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:115:13-49
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:114:13-49
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:114:13-56
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:113:13-56
 activity#app.androidgrid.faysr.ui.activities.intro.AppIntroActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:116:9-119:50
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:115:9-118:50
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:118:13-48
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:117:13-48
 	android:theme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:119:13-47
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:118:13-47
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:117:13-65
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:116:13-65
 activity#app.androidgrid.faysr.ui.activities.bugreport.BugReportActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:120:9-122:55
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:119:9-121:55
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:122:13-52
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:121:13-52
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:121:13-70
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:120:13-70
 activity#app.androidgrid.faysr.appshortcuts.AppShortcutLauncherActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:123:9-126:75
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:122:9-125:75
 	android:launchMode
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:125:13-48
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:124:13-48
 	android:theme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:126:13-72
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:125:13-72
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:124:13-69
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:123:13-69
 service#app.androidgrid.faysr.service.MusicService
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:128:9-130:38
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:127:9-129:38
 	android:enabled
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:130:13-35
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:129:13-35
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:129:13-49
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:128:13-49
 receiver#app.androidgrid.faysr.service.MediaButtonIntentReceiver
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:132:9-136:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:131:9-135:20
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:132:19-68
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:131:19-68
 intent-filter#android.intent.action.MEDIA_BUTTON
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:133:13-135:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:132:13-134:29
 action#android.intent.action.MEDIA_BUTTON
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:134:17-77
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:133:17-77
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:134:25-74
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:133:25-74
 meta-data#android.max_aspect
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:138:9-140:35
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:137:9-139:35
 	android:value
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:140:13-32
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:139:13-32
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:139:13-46
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:138:13-46
 meta-data#com.lge.support.SPLIT_WINDOW
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:141:9-143:36
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:140:9-142:36
 	android:value
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:143:13-33
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:142:13-33
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:142:13-56
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:141:13-56
 meta-data#com.crashlytics.ApiKey
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:144:9-146:72
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:143:9-145:72
 	android:value
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:146:13-69
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:145:13-69
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:145:13-50
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:144:13-50
 meta-data#app.androidgrid.faysr.glide.FaysrGlideModule
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:147:9-149:43
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:146:9-148:43
 	android:value
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:149:13-40
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:148:13-40
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:148:13-72
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:147:13-72
 meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:150:9-152:43
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:149:9-151:43
 	android:value
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:152:13-40
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:151:13-40
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:151:13-84
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:150:13-84
 receiver#app.androidgrid.faysr.appwidgets.BootReceiver
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:155:9-160:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:154:9-159:20
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:155:19-58
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:154:19-58
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:156:13-159:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:155:13-158:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:157:17-79
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:156:17-79
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:157:25-76
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:156:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:158:17-82
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:157:17-82
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:158:25-79
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:157:25-79
 receiver#app.androidgrid.faysr.appwidgets.AppWidgetBig
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:161:9-172:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:160:9-171:20
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:164:13-56
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:163:13-56
 	android:exported
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:163:13-37
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:162:13-37
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:162:13-52
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:161:13-52
 intent-filter#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:165:13-167:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:164:13-166:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:166:17-84
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:165:17-84
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:166:25-81
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:165:25-81
 meta-data#android.appwidget.provider
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:169:13-171:63
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:168:13-170:63
 	android:resource
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:171:17-60
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:170:17-60
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:170:17-58
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:169:17-58
 receiver#app.androidgrid.faysr.appwidgets.AppWidgetClassic
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:173:9-184:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:172:9-183:20
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:176:13-60
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:175:13-60
 	android:exported
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:175:13-37
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:174:13-37
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:174:13-56
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:173:13-56
 receiver#app.androidgrid.faysr.appwidgets.AppWidgetSmall
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:185:9-196:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:184:9-195:20
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:188:13-58
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:187:13-58
 	android:exported
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:187:13-37
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:186:13-37
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:186:13-54
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:185:13-54
 receiver#app.androidgrid.faysr.appwidgets.AppWidgetCard
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:197:9-208:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:196:9-207:20
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:200:13-57
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:199:13-57
 	android:exported
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:199:13-37
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:198:13-37
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:198:13-53
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:197:13-53
 activity#app.androidgrid.faysr.ui.activities.PurchaseActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:210:9-68
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:209:9-68
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:210:19-65
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:209:19-65
 activity#app.androidgrid.faysr.ui.activities.under_development.UnderDevelopmentActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:222:9-224:61
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:221:9-223:61
 	android:theme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:224:13-58
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:223:13-58
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:223:13-85
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:222:13-85
 activity#app.androidgrid.faysr.editor.RingdroidSelectActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:227:9-239:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:226:9-238:20
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:229:13-56
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:228:13-56
 	android:theme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:230:13-52
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:229:13-52
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:228:13-59
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:227:13-59
 intent-filter#android.intent.action.GET_CONTENT+android.intent.category.DEFAULT+android.intent.category.OPENABLE
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:231:13-238:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:230:13-237:29
 action#android.intent.action.GET_CONTENT
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:232:17-76
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:231:17-76
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:232:25-73
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:231:25-73
 activity#app.androidgrid.faysr.editor.RingdroidEditActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:247:9-258:20
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:246:9-257:20
 	android:hardwareAccelerated
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:250:13-47
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:249:13-47
 	android:windowSoftInputMode
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:252:13-55
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:251:13-55
 	android:configChanges
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:249:13-74
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:248:13-74
 	android:theme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:251:13-52
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:250:13-52
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:248:13-57
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:247:13-57
 intent-filter#android.intent.action.EDIT
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:253:13-257:29
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:252:13-256:29
 	android:label
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:253:28-63
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:252:28-63
 action#android.intent.action.EDIT
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:254:17-69
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:253:17-69
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:254:25-66
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:253:25-66
 activity#app.androidgrid.faysr.editor.ChooseContactActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:261:9-263:66
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:260:9-262:66
 	android:configChanges
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:263:13-63
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:262:13-63
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:262:13-57
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:261:13-57
 activity#app.androidgrid.faysr.editor.FaysrSongTrimActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:264:9-266:66
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:263:9-265:66
 	android:theme
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:266:13-63
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:265:13-63
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:265:13-57
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:264:13-57
 activity#app.androidgrid.faysr.ui.activities.SupportDevelopmentActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:267:9-78
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:266:9-78
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:267:19-75
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:266:19-75
 activity#app.androidgrid.faysr.ui.activities.PlayingQueueActivity
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:268:9-81
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:267:9-72
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:268:19-69
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:267:19-69
+activity#app.androidgrid.faysr.EmptyActivity
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:268:9-60
+	android:name
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:268:19-48
 uses-sdk
 INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
@@ -722,11 +724,11 @@ INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidM
 		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
 		INJECTED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:217:13-219:58
+ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:216:13-218:58
 	android:resource
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:219:17-55
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:218:17-55
 	android:name
-		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:218:17-67
+		ADDED from /media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/AndroidManifest.xml:217:17-67
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:11.6.2] /home/ankit/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/3140fe105e228ea9693ec7ca5f42f09b/AndroidManifest.xml:23:9-27:19
 	android:exported

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Faysr</string>
+    <string name="app_name" translatable="false">Faysr Music</string>
 
     <string name="karim_abou_zeid" translatable="false">Karim Abou Zeid</string>
     <string name="ankit_suda" translatable="false">Ankit Suda</string>

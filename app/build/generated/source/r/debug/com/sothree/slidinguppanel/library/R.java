@@ -36,10 +36,10 @@ public final class R {
     }
     public static final class id {
         public static final int anchored = 0x7f090066;
-        public static final int collapsed = 0x7f09008e;
-        public static final int expanded = 0x7f0900bd;
-        public static final int hidden = 0x7f0900d1;
-        public static final int item_touch_helper_previous_elevation = 0x7f0900f7;
+        public static final int collapsed = 0x7f09008f;
+        public static final int expanded = 0x7f0900be;
+        public static final int hidden = 0x7f0900d2;
+        public static final int item_touch_helper_previous_elevation = 0x7f0900f8;
     }
     public static final class styleable {
         public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f0400e2, 0x7f0400e3, 0x7f0400e4, 0x7f0400ec, 0x7f0400ed, 0x7f04011c, 0x7f0401f0, 0x7f04020c, 0x7f040212 };

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.androidgrid.faysr"
-    android:versionCode="7"
-    android:versionName="1.4.1" >
+    android:versionCode="11"
+    android:versionName="1.5.1" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -34,7 +34,6 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phonograph.Light" >
         <activity android:name="app.androidgrid.faysr.ui.activities.MainActivity" >
@@ -277,6 +276,7 @@
             android:theme="@style/Theme.Phonograph.Base.Light" />
         <activity android:name="app.androidgrid.faysr.ui.activities.SupportDevelopmentActivity" />
         <activity android:name="app.androidgrid.faysr.ui.activities.PlayingQueueActivity" />
+        <activity android:name="app.androidgrid.faysr.EmptyActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

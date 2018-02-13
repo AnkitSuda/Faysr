@@ -27,6 +27,8 @@ import app.androidgrid.faysr.ui.fragments.player.flat.FlatPlayerFragment;
 import app.androidgrid.faysr.ui.fragments.player.modern.ModernPlayerFragment;
 import app.androidgrid.faysr.util.PreferenceUtil;
 import app.androidgrid.faysr.util.ViewUtil;
+
+import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import app.androidgrid.faysr.views.BottomNavigationViewEx;
@@ -164,7 +166,7 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
         mBottomNavigationView.setTranslationY(slideOffset * 300);
         setMiniPlayerAlphaProgress(slideOffset);
         if (navigationBarColorAnimator != null) navigationBarColorAnimator.cancel();
-        super.setNavigationbarColor((int) argbEvaluator.evaluate(slideOffset, navigationbarColor, playerFragment.getPaletteColor()));
+        super.setNavigationbarColor((int) argbEvaluator.evaluate(slideOffset, ColorUtil.shiftColor(navigationbarColor, 0.8f), ColorUtil.shiftColor(playerFragment.getPaletteColor(), 0.8f)));
     }
 
     @Override
@@ -186,7 +188,7 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
         // restore values
         super.setLightStatusbar(lightStatusbar);
         super.setTaskDescriptionColor(taskColor);
-        super.setNavigationbarColor(navigationbarColor);
+        super.setNavigationbarColor(ColorUtil.shiftColor(navigationbarColor, 0.8f));
 
         playerFragment.setMenuVisibility(false);
         playerFragment.setUserVisibleHint(false);
@@ -198,7 +200,7 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
         int playerFragmentColor = playerFragment.getPaletteColor();
         super.setLightStatusbar(false);
         super.setTaskDescriptionColor(playerFragmentColor);
-        super.setNavigationbarColor(playerFragmentColor);
+        super.setNavigationbarColor(ColorUtil.shiftColor(playerFragmentColor, 0.8f));
 
         playerFragment.setMenuVisibility(true);
         playerFragment.setUserVisibleHint(true);
@@ -293,7 +295,12 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
 
     @Override
     public void setNavigationbarColor(int color) {
-        this.navigationbarColor = color;
+        if (currentNowPlayingScreen == NowPlayingScreen.MODERN) {
+            color = ColorUtil.shiftColor(color, 0.8f);
+            this.navigationbarColor = ColorUtil.shiftColor(color, 0.8f);
+        } else {
+            this.navigationbarColor = color;
+        }
         if (getPanelState() == SlidingUpPanelLayout.PanelState.COLLAPSED) {
             if (navigationBarColorAnimator != null) navigationBarColorAnimator.cancel();
             super.setNavigationbarColor(color);
@@ -302,6 +309,7 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
 
     private void animateNavigationBarColor(int color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (currentNowPlayingScreen == NowPlayingScreen.MODERN) color = ColorUtil.shiftColor(color, 0.8f);
             if (navigationBarColorAnimator != null) navigationBarColorAnimator.cancel();
             navigationBarColorAnimator = ValueAnimator
                     .ofArgb(getWindow().getNavigationBarColor(), color)

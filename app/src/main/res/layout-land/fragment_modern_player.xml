@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root"
     xmlns:ads="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -89,7 +90,7 @@
                     <android.support.v7.widget.Toolbar
                         android:id="@+id/player_toolbar"
                         style="@style/Toolbar2"
-                        android:background="@android:color/white" />
+                        android:background="@android:color/transparent" />
                 </FrameLayout>
 
             </LinearLayout>

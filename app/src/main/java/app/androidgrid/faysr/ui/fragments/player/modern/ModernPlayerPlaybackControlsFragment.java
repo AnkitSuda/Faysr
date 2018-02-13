@@ -118,9 +118,13 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     public void onResume() {
         super.onResume();
         progressViewUpdateHelper.start();
-        if (visualizer == null || visualizer.getVisualizer() == null) return;
-        visualizer.setPlayer();
-        visualizer.getVisualizer().setEnabled(true);
+        try {
+            if (visualizer == null || visualizer.getVisualizer() == null) return;
+            visualizer.setPlayer();
+            visualizer.getVisualizer().setEnabled(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

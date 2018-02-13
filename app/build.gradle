@@ -37,8 +37,8 @@ android {
         renderscriptTargetApi 27
         vectorDrawables.useSupportLibrary = true
 
-        versionCode 7
-        versionName "1.4.1"
+        versionCode 11
+        versionName "1.5.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
 

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 
@@ -31,6 +32,8 @@ import app.androidgrid.faysr.model.Artist;
 import app.androidgrid.faysr.model.Song;
 import app.androidgrid.faysr.util.MusicUtil;
 import app.androidgrid.faysr.util.NavigationUtil;
+import app.androidgrid.faysr.util.Util;
+import app.androidgrid.faysr.util.ViewUtil;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)
