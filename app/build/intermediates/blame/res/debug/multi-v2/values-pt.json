@@ -1,27 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
+            "outputFile": "J:\\AndroidGrid\\Faysr\\code\\Faysr\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
             "map": [
                 {
-                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/9348e81d81117ee97cc41fb9178d690a/res/values-pt/values-pt.xml",
+                    "source": "C:\\Users\\SUDA\\.gradle\\caches\\transforms-1\\files-1.1\\licensesdialog-1.8.3.aar\\e4dec3fdf5d2aa10d9fa86c67d7d1b0f\\res\\values-pt\\strings.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "19,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "767,717",
+                        "endColumns": "48,48",
+                        "endOffsets": "811,761"
                     },
                     "to": {
-                        "startLines": "22",
-                        "startColumns": "4",
-                        "startOffsets": "2087",
-                        "endColumns": "100",
-                        "endOffsets": "2183"
+                        "startLines": "19,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "1904,1953",
+                        "endColumns": "48,48",
+                        "endOffsets": "1948,1997"
                     }
                 },
                 {
-                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a5422c3d994bef5b23272f27ab2dca7b/res/values-pt/values-pt.xml",
+                    "source": "C:\\Users\\SUDA\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ca06e22cf943d3933700f870722a3bfc\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/6ea7f459e9f52d53d4e62881639affad/res/values-pt/strings.xml",
+                    "source": "C:\\Users\\SUDA\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\ded1534026352c11cd1900abf469605b\\res\\values-pt\\values-pt.xml",
                     "from": {
-                        "startLines": "19,18",
-                        "startColumns": "4,4",
-                        "startOffsets": "767,717",
-                        "endColumns": "48,48",
-                        "endOffsets": "811,761"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "19,20",
-                        "startColumns": "4,4",
-                        "startOffsets": "1904,1953",
-                        "endColumns": "48,48",
-                        "endOffsets": "1948,1997"
+                        "startLines": "22",
+                        "startColumns": "4",
+                        "startOffsets": "2087",
+                        "endColumns": "100",
+                        "endOffsets": "2183"
                     }
                 }
             ]

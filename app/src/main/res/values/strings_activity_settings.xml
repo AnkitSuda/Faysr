@@ -1,10 +1,9 @@
 <resources>
     <string-array name="pref_start_page_list_titles">
         <item>@string/last_opened</item>
-        <item>@string/songs</item>
-        <item>@string/albums</item>
-        <item>@string/artists</item>
-        <item>@string/playlists</item>
+        <item>@string/home</item>
+        <item>@string/library</item>
+        <item>@string/folders</item>
     </string-array>
 
     <string-array name="pref_start_page_list_values">
@@ -12,7 +11,6 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
-        <item>3</item>
     </string-array>
 
     <string-array name="pref_general_theme_list_titles">

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
 import app.androidgrid.faysr.R;
+import app.androidgrid.faysr.ui.fragments.player.NowPlayingScreen;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)
@@ -32,15 +33,15 @@ public class AppIntroActivity extends IntroActivity {
         addSlide(new SimpleSlide.Builder()
                 .title(R.string.label_playing_queue)
                 .description(R.string.open_playing_queue_instruction)
-                .image(R.drawable.tutorial_queue_swipe_up)
+                .image(R.drawable.tutorial_open_queue)
                 .background(R.color.md_deep_orange_500)
                 .backgroundDark(R.color.md_deep_orange_600)
                 .layout(R.layout.fragment_simple_slide_large_image)
                 .build());
         addSlide(new SimpleSlide.Builder()
                 .title(R.string.label_playing_queue)
-                .description(R.string.rearrange_playing_queue_instruction)
-                .image(R.drawable.tutorial_rearrange_queue)
+                .description(R.string.open_page_instruction)
+                .image(R.drawable.tutorial_change_page)
                 .background(R.color.md_indigo_500)
                 .backgroundDark(R.color.md_indigo_600)
                 .layout(R.layout.fragment_simple_slide_large_image)

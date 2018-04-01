@@ -20,10 +20,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.afollestad.materialcab.MaterialCab;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.adapter.SearchAdapter;
@@ -55,9 +51,6 @@ public class SearchActivity extends AbsMusicServiceActivity implements CabHolder
     Toolbar toolbar;
     @BindView(android.R.id.empty)
     TextView empty;
-
-    @BindView(R.id.adView)
-    AdView adView;
 
     SearchView searchView;
 
@@ -95,48 +88,12 @@ public class SearchActivity extends AbsMusicServiceActivity implements CabHolder
         });
 
         setUpToolBar();
-        setUpAdView();
 
         if (savedInstanceState != null) {
             query = savedInstanceState.getString(QUERY);
         }
 
         getSupportLoaderManager().initLoader(LOADER_ID, null, this);
-    }
-
-    private void setUpAdView() {
-        MobileAds.initialize(this, getString(R.string.app_ad_id));
-
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-        adView.setAdListener(new AdListener(){
-            @Override
-            public void onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                // Code to be executed when an ad request fails.
-            }
-
-            @Override
-            public void onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            @Override
-            public void onAdClosed() {
-                // Code to be executed when when the user is about to return
-                // to the app after tapping on an ad.
-            }
-        });
     }
 
     @Override

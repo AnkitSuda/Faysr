@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?android:windowBackground"
     android:paddingBottom="@dimen/card_on_app_bar_side_padding"
     android:paddingLeft="@dimen/card_on_app_bar_side_padding"
     android:paddingRight="@dimen/card_on_app_bar_side_padding"

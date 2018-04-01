@@ -16,17 +16,11 @@
             android:entries="@array/pref_general_theme_list_titles"
             android:entryValues="@array/pref_general_theme_list_values"
             android:key="general_theme"
-            android:enabled="false"
             android:negativeButtonText="@null"
             android:positiveButtonText="@null"
             android:title="@string/pref_title_general_theme" />
 
-        <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:defaultValue="true"
-            android:key="tab_icons"
-            android:persistent="false"
-            android:summary="@string/pref_summary_tab_icons"
-            android:title="@string/pref_title_tab_icons" />
+
 
     </com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 

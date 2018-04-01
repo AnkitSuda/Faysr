@@ -2,11 +2,9 @@ package app.androidgrid.faysr.ui.activities;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,14 +18,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
-import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -37,7 +35,7 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
-import app.androidgrid.faysr.App;
+
 import app.androidgrid.faysr.BuildConfig;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.dialogs.ChangelogDialog;
@@ -50,7 +48,6 @@ import app.androidgrid.faysr.loader.ArtistSongLoader;
 import app.androidgrid.faysr.loader.PlaylistSongLoader;
 import app.androidgrid.faysr.model.Song;
 import app.androidgrid.faysr.service.MusicService;
-import app.androidgrid.faysr.toasts.VolumeAdjustToast;
 import app.androidgrid.faysr.ui.activities.base.AbsSlidingMusicPanelActivity;
 import app.androidgrid.faysr.ui.activities.intro.AppIntroActivity;
 import app.androidgrid.faysr.ui.activities.under_development.UnderDevelopmentActivity;
@@ -60,8 +57,7 @@ import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.AlbumsFragm
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.ArtistsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.PlaylistsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.SongsFragment;
-import app.androidgrid.faysr.ui.fragments.player.MiniPlayerFragment;
-import app.androidgrid.faysr.ui.fragments.player.card.CardPlayerFragment;
+import app.androidgrid.faysr.ui.fragments.mainactivity.home.HomeFragment;
 import app.androidgrid.faysr.util.NavigationUtil;
 import app.androidgrid.faysr.util.PreferenceUtil;
 import app.androidgrid.faysr.util.Util;
@@ -86,8 +82,9 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     public static final int APP_INTRO_REQUEST = 100;
     public static final int PURCHASE_REQUEST = 101;
 
-    private static final int LIBRARY = 0;
-    private static final int FOLDERS = 1;
+    private static final int HOME = 0;
+    private static final int LIBRARY = 1;
+    private static final int FOLDERS = 2;
 
     @Nullable
     LibraryTabSelectedItem mTabSelectedItem;
@@ -132,7 +129,14 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         setUpDrawerLayout();
 
         if (savedInstanceState == null) {
-            setMusicChooser(PreferenceUtil.getInstance(this).getLastMusicChooser());
+            int defaultPage = PreferenceUtil.getInstance(this).getDefaultStartPage();
+            Log.i("DefaultPage", String.valueOf(defaultPage));
+
+            if (String.valueOf(defaultPage).equals("-1")) {
+                setMusicChooser(PreferenceUtil.getInstance(this).getLastMusicChooser());
+            } else if (defaultPage >= 0){
+                setMusicChooser(PreferenceUtil.getInstance(this).getDefaultStartPage());
+            }
         } else {
             restoreCurrentFragment();
         }
@@ -151,6 +155,10 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
 
         PreferenceUtil.getInstance(this).setLastMusicChooser(key);
         switch (key) {
+            case HOME:
+                navigationView.setCheckedItem(R.id.nav_home);
+                setCurrentFragment(HomeFragment.newInstance());
+                break;
             case LIBRARY:
                 navigationView.setCheckedItem(R.id.nav_library);
                 setCurrentFragment(LibraryFragment.newInstance());
@@ -163,26 +171,20 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     }
 
     private void setCurrentFragment(@SuppressWarnings("NullableProblems") Fragment fragment) {
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment, null).commit();
-//        currentFragment = (MainActivityFragmentCallbacks) fragment;
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment, TAG);
-        //if (isStackAdd) {
-            //fragmentTransaction.addToBackStack(TAG);
-        //}
-        fragmentTransaction.commit();
+        try {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment, TAG);
 
-        currentFragment = (MainActivityFragmentCallbacks) fragment;
+            fragmentTransaction.commit();
 
-        if (fragment instanceof FoldersFragment) {
-            MiniPlayerFragment.setGravityToTop(false);
-        } else if (fragment instanceof LibraryFragment) {
-            MiniPlayerFragment.setGravityToTop(true);
-        }
+            currentFragment = (MainActivityFragmentCallbacks) fragment;
 
-        if (fragment instanceof LibraryTabSelectedItem) {
-            mTabSelectedItem = (LibraryTabSelectedItem) fragment;
+            if (fragment instanceof LibraryTabSelectedItem) {
+                mTabSelectedItem = (LibraryTabSelectedItem) fragment;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -258,6 +260,14 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 drawerLayout.closeDrawers();
                 switch (menuItem.getItemId()) {
+                    case R.id.nav_home:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                setMusicChooser(HOME);
+                            }
+                        }, 200);
+                        break;
                     case R.id.nav_library:
                         new Handler().postDelayed(new Runnable() {
                             @Override

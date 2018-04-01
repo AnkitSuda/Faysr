@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?android:windowBackground">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -13,6 +14,7 @@
         android:layout_marginLeft="-1dp"
         android:layout_marginRight="-1dp"
         app:cardElevation="6dp"
+        app:cardBackgroundColor="?cardBackgroundColor"
         app:cardCornerRadius="1dp">
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -100,7 +102,7 @@
             android:background="?attr/roundSelector"
             android:padding="22dp"
             android:scaleType="fitCenter"
-            android:tint="@color/md_black_1000"
+            android:tint="?android:textColorPrimary"
             app:srcCompat="@drawable/ic_skip_next_white_24dp"
             tools:ignore="MissingPrefix" />
         <ImageButton
@@ -112,7 +114,7 @@
             android:padding="22dp"
             android:scaleType="fitCenter"
             tools:ignore="MissingPrefix"
-            android:tint="@color/md_black_1000"
+            android:tint="?android:textColorPrimary"
             tools:src="@drawable/ic_pause_white_24dp" />
 
         <EditText
@@ -124,7 +126,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:textColor="@color/md_black_1000"
+            android:textColor="?android:textColorPrimary"
             android:textAlignment="center"
             android:scaleType="fitCenter"
             android:text="0:00"
@@ -138,7 +140,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:textColor="@color/md_black_1000"
+            android:textColor="?android:textColorPrimary"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="0:00"
@@ -158,7 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/save_button"
-            android:textColor="@color/md_black_1000"
+            android:textColor="?android:textColorSecondary"
             android:textStyle="bold"
             android:clickable="true"
             android:focusable="true"
@@ -174,7 +176,7 @@
             android:focusable="true"
             android:background="?attr/selectableItemBackground"
             android:text="@string/menu_reset"
-            android:textColor="@color/md_black_1000"
+            android:textColor="?android:textColorSecondary"
             android:textStyle="bold"
             android:textAlignment="center"
             android:padding="16dp"/>
@@ -187,7 +189,7 @@
             android:focusable="true"
             android:background="?attr/selectableItemBackground"
             android:text="@string/notices_close"
-            android:textColor="@color/md_black_1000"
+            android:textColor="?android:textColorSecondary"
             android:textStyle="bold"
             android:textAlignment="center"
             android:padding="16dp"/>

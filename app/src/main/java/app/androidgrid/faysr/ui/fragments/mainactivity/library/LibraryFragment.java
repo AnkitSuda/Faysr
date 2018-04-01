@@ -3,16 +3,15 @@ package app.androidgrid.faysr.ui.fragments.mainactivity.library;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -21,19 +20,15 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewStub;
 import android.widget.FrameLayout;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
-import com.kabouzeid.appthemehelper.util.TabLayoutUtil;
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 
-import java.util.concurrent.ExecutionException;
-
 import app.androidgrid.faysr.R;
-import app.androidgrid.faysr.adapter.MusicLibraryPagerAdapter;
 import app.androidgrid.faysr.dialogs.CreatePlaylistDialog;
 import app.androidgrid.faysr.dialogs.SleepTimerDialog;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
@@ -44,6 +39,7 @@ import app.androidgrid.faysr.ui.activities.MainActivity;
 import app.androidgrid.faysr.ui.activities.SearchActivity;
 import app.androidgrid.faysr.ui.fragments.mainactivity.AbsMainActivityFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.AbsLibraryPagerRecyclerViewCustomGridSizeFragment;
+import app.androidgrid.faysr.ui.fragments.mainactivity.home.HomeFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.PlaylistsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.SongsFragment;
 import app.androidgrid.faysr.ui.fragments.player.MiniPlayerFragment;
@@ -55,18 +51,17 @@ import app.androidgrid.faysr.util.Util;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 
 public class LibraryFragment extends AbsMainActivityFragment
         implements CabHolder, MainActivity.MainActivityFragmentCallbacks, LibraryTabSelectedItem {
     private static final String TAG = "LibraryFragment";
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @BindView(R.id.appbar)
-    AppBarLayout mAppbar;
+    public static AppBarLayout mAppbar;
     @BindView(R.id.fragment_container)
     FrameLayout mFrame;
+    @BindView(R.id.cab_stub)
+    ViewStub viewStub;
     private Unbinder mUnBinder;
     private MaterialCab cab;
     private FragmentManager mFragmentManager;
@@ -95,6 +90,7 @@ public class LibraryFragment extends AbsMainActivityFragment
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_library, container, false);
         mUnBinder = ButterKnife.bind(this, view);
+        mAppbar = view.findViewById(R.id.appbar);
         return view;
     }
 
@@ -158,6 +154,14 @@ public class LibraryFragment extends AbsMainActivityFragment
         return fragment == new PlaylistsFragment();
     }
 
+    private boolean isHomePage() {
+        if (mFragmentManager == null) {
+            return false;
+        }
+        Fragment fragment = mFragmentManager.findFragmentByTag(TAG);
+        return fragment == new HomeFragment();
+    }
+
     @Override
     public boolean handleBackPress() {
         if (cab != null && cab.isActive()) {
@@ -167,6 +171,11 @@ public class LibraryFragment extends AbsMainActivityFragment
         return false;
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        setUpToolbar();
+    }
 
     @Override
     public void selectedFragment(Fragment fragment) {
@@ -176,6 +185,7 @@ public class LibraryFragment extends AbsMainActivityFragment
         fragmentTransaction
                 .replace(R.id.fragment_container, fragment, TAG)
                 .commit();
+
     }
 
     @NonNull
@@ -197,6 +207,8 @@ public class LibraryFragment extends AbsMainActivityFragment
         inflater.inflate(R.menu.menu_main, menu);
         if (isPlaylistPage()) {
             menu.add(0, R.id.action_new_playlist, 0, R.string.new_playlist_title);
+        } else if (isHomePage()) {
+            mToolbar.setVisibility(View.GONE);
         }
         Fragment currentFragment = getCurrentFragment();
         if (currentFragment instanceof AbsLibraryPagerRecyclerViewCustomGridSizeFragment && currentFragment.isAdded()) {

@@ -101,6 +101,10 @@ public final class PreferenceUtil {
         return getThemeResFromPrefValue(mPreferences.getString(GENERAL_THEME, ""));
     }
 
+    public String getGeneralThemeNem() {
+        return mPreferences.getString(GENERAL_THEME, "");
+    }
+
     @StyleRes
     public static int getThemeResFromPrefValue(String themePrefValue) {
         switch (themePrefValue) {
@@ -153,7 +157,7 @@ public final class PreferenceUtil {
         for (NowPlayingScreen nowPlayingScreen : NowPlayingScreen.values()) {
             if (nowPlayingScreen.id == id) return nowPlayingScreen;
         }
-        return NowPlayingScreen.CARD;
+        return NowPlayingScreen.OLD_CARD;
     }
 
     @SuppressLint("CommitPrefEdits")

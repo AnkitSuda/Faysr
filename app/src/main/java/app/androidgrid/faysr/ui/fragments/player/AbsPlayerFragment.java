@@ -10,6 +10,7 @@ import android.view.View;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.dialogs.AddToPlaylistDialog;
 import app.androidgrid.faysr.dialogs.CreatePlaylistDialog;
+import app.androidgrid.faysr.dialogs.LyricsDialog;
 import app.androidgrid.faysr.dialogs.SleepTimerDialog;
 import app.androidgrid.faysr.dialogs.SongDetailDialog;
 import app.androidgrid.faysr.dialogs.SongShareDialog;
@@ -17,6 +18,7 @@ import app.androidgrid.faysr.editor.RingdroidSelectActivity;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.interfaces.PaletteColorHolder;
 import app.androidgrid.faysr.model.Song;
+import app.androidgrid.faysr.model.lyrics.Lyrics;
 import app.androidgrid.faysr.ui.activities.tageditor.AbsTagEditorActivity;
 import app.androidgrid.faysr.ui.activities.tageditor.SongTagEditorActivity;
 import app.androidgrid.faysr.ui.fragments.AbsMusicServiceFragment;
@@ -28,6 +30,8 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
 
     private Callbacks callbacks;
     private static boolean isToolbarShown = true;
+
+    public Lyrics mLyrics;
 
     @Override
     public void onAttach(Context context) {
@@ -87,6 +91,13 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
                 return true;
             case R.id.action_go_to_artist:
                 NavigationUtil.goToArtist(getActivity(), song.artistId);
+                return true;
+            case R.id.action_open_playing_queue:
+                NavigationUtil.goToPlayingQueue(getActivity());
+                return true;
+            case R.id.action_show_lyrics:
+                if (mLyrics != null)
+                    LyricsDialog.create(mLyrics).show(getFragmentManager(), "LYRICS");
                 return true;
         }
         return false;

@@ -1,74 +1,80 @@
 package app.androidgrid.faysr.ui.fragments.player.flat;
 
-import android.animation.Animator;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
-import android.animation.TimeInterpolator;
+
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.animation.ObjectAnimator;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.ClipDrawable;
+import android.graphics.drawable.LayerDrawable;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
+import com.kabouzeid.appthemehelper.util.TintHelper;
+
+
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.helper.MusicProgressViewUpdateHelper;
 import app.androidgrid.faysr.helper.PlayPauseButtonOnClickHandler;
 import app.androidgrid.faysr.misc.SimpleOnSeekbarChangeListener;
+import app.androidgrid.faysr.model.Song;
 import app.androidgrid.faysr.service.MusicService;
 import app.androidgrid.faysr.ui.fragments.AbsMusicServiceFragment;
-import app.androidgrid.faysr.ui.fragments.player.PlayerAlbumCoverFragment;
 import app.androidgrid.faysr.util.MusicUtil;
+import app.androidgrid.faysr.util.PreferenceUtil;
 import app.androidgrid.faysr.views.PlayPauseDrawable;
-
-import java.util.Collection;
-import java.util.LinkedList;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * @author Karim Abou Zeid (kabouzeid)
+ * A simple {@link Fragment} subclass.
  */
 public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment implements MusicProgressViewUpdateHelper.Callback {
 
-    private Unbinder unbinder;
-
-    @BindView(R.id.player_play_pause__button)
-    ImageButton playPauseButton;
-    @BindView(R.id.player_prev_button)
-    ImageButton prevButton;
-    @BindView(R.id.player_next_button)
-    ImageButton nextButton;
+    private static final String TAG = "FlatPlaybackControls";
+    @BindView(R.id.text)
+    TextView mText;
+    @BindView(R.id.title)
+    TextView mTitle;
+    @BindView(R.id.playback_controls)
+    ViewGroup viewGroup;
+    @BindView(R.id.player_song_total_time)
+    TextView mSongTotalTime;
+    @BindView(R.id.player_song_current_progress)
+    TextView mPlayerSongCurrentProgress;
     @BindView(R.id.player_repeat_button)
-    ImageButton repeatButton;
+    ImageButton mPlayerRepeatButton;
     @BindView(R.id.player_shuffle_button)
-    ImageButton shuffleButton;
-
+    ImageButton mPlayerShuffleButton;
+    @BindView(R.id.player_play_pause_button)
+    ImageView mPlayerPlayPauseFab;
+    Unbinder unbinder;
     @BindView(R.id.player_progress_slider)
     SeekBar progressSlider;
-    @BindView(R.id.player_song_total_time)
-    TextView songTotalTime;
-    @BindView(R.id.player_song_current_progress)
-    TextView songCurrentProgress;
-
-    private PlayPauseDrawable playPauseDrawable;
-
     private int lastPlaybackControlsColor;
     private int lastDisabledPlaybackControlsColor;
-
     private MusicProgressViewUpdateHelper progressViewUpdateHelper;
-
-    private AnimatorSet musicControllerAnimationSet;
-
-    private boolean hidden = false;
+    private PlayPauseDrawable playerFabPlayPauseDrawable;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,24 +82,19 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
         progressViewUpdateHelper = new MusicProgressViewUpdateHelper(this);
     }
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_flat_player_playback_controls, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_flat_player_playback_controls, container, false);
+        unbinder = ButterKnife.bind(this, view);
+        return view;
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        unbinder = ButterKnife.bind(this, view);
         setUpMusicControllers();
-        updateProgressTextColor();
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
     }
 
     @Override
@@ -109,29 +110,39 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
     }
 
     @Override
-    public void onServiceConnected() {
-        updatePlayPauseDrawableState(false);
-        updateRepeatState();
-        updateShuffleState();
+    public void onUpdateProgressViews(int progress, int total) {
+        progressSlider.setMax(total);
+
+        ObjectAnimator animator = ObjectAnimator.ofInt(progressSlider, "progress", progress);
+        animator.setDuration(1500);
+        animator.setInterpolator(new LinearInterpolator());
+        animator.start();
+
+        mPlayerSongCurrentProgress.setText(MusicUtil.getReadableDurationString(progress));
+        mSongTotalTime.setText(MusicUtil.getReadableDurationString(total));
     }
 
-    @Override
-    public void onPlayStateChanged() {
-        updatePlayPauseDrawableState(true);
+
+    public void show() {
+        mPlayerPlayPauseFab.animate()
+                .scaleX(1f)
+                .scaleY(1f)
+                .setInterpolator(new DecelerateInterpolator())
+                .start();
     }
 
-    @Override
-    public void onRepeatModeChanged() {
-        updateRepeatState();
+
+    public void hide() {
+        if (mPlayerPlayPauseFab != null) {
+            mPlayerPlayPauseFab.setScaleX(0f);
+            mPlayerPlayPauseFab.setScaleY(0f);
+            mPlayerPlayPauseFab.setRotation(0f);
+        }
     }
 
-    @Override
-    public void onShuffleModeChanged() {
-        updateShuffleState();
-    }
-
-    public void setDark(boolean dark) {
-        if (dark) {
+    public void setDark(int dark) {
+        int color = ATHUtil.resolveColor(getActivity(), android.R.attr.colorBackground);
+        if (ColorUtil.isColorLight(color)) {
             lastPlaybackControlsColor = MaterialValueHelper.getSecondaryTextColor(getActivity(), true);
             lastDisabledPlaybackControlsColor = MaterialValueHelper.getSecondaryDisabledTextColor(getActivity(), true);
         } else {
@@ -139,39 +150,85 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
             lastDisabledPlaybackControlsColor = MaterialValueHelper.getPrimaryDisabledTextColor(getActivity(), false);
         }
 
+        //if (PreferenceUtil.getInstance(getContext()).getAdaptiveColor()) {
+            updateTextColors(dark);
+            setProgressBarColor(dark);
+            TintHelper.setTintAuto(mPlayerPlayPauseFab, dark, true);
+/*
+        } else {
+            int accentColor = ThemeStore.accentColor(getContext());
+            updateTextColors(accentColor);
+            setProgressBarColor(accentColor);
+            TintHelper.setTintAuto(mPlayerPlayPauseFab, accentColor, true);
+        }*/
+
         updateRepeatState();
         updateShuffleState();
         updatePrevNextColor();
-        updatePlayPauseColor();
         updateProgressTextColor();
     }
 
-    private void setUpPlayPauseButton() {
-        playPauseDrawable = new PlayPauseDrawable(getActivity());
-        playPauseButton.setImageDrawable(playPauseDrawable);
-        updatePlayPauseColor();
-        playPauseButton.setOnClickListener(new PlayPauseButtonOnClickHandler());
-        playPauseButton.post(new Runnable() {
-            @Override
-            public void run() {
-                if (playPauseButton != null) {
-                    playPauseButton.setPivotX(playPauseButton.getWidth() / 2);
-                    playPauseButton.setPivotY(playPauseButton.getHeight() / 2);
-                }
-            }
-        });
+    private void setProgressBarColor(int color) {
+        progressSlider.getThumb().mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN);
+        progressSlider.getProgressDrawable().mutate().setColorFilter(ColorUtil.lightenColor(color), PorterDuff.Mode.SRC_IN);
+    }
+
+    private void updateTextColors(int color) {
+        mTitle.setBackgroundColor(color);
+        mTitle.setTextColor(MaterialValueHelper.getPrimaryTextColor(getContext(), ColorUtil.isColorLight(color)));
+        mText.setBackgroundColor(ColorUtil.darkenColor(color));
+        mText.setTextColor(MaterialValueHelper.getSecondaryTextColor(getContext(), ColorUtil.isColorLight(color)));
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    @Override
+    public void onServiceConnected() {
+        updatePlayPauseDrawableState(false);
+        updateRepeatState();
+        updateShuffleState();
+        updateSong();
+    }
+
+    @Override
+    public void onPlayingMetaChanged() {
+        super.onPlayingMetaChanged();
+        updateSong();
+    }
+
+    @Override
+    public void onPlayStateChanged() {
+        updatePlayPauseDrawableState(true);
     }
 
     protected void updatePlayPauseDrawableState(boolean animate) {
         if (MusicPlayerRemote.isPlaying()) {
-            playPauseDrawable.setPause(animate);
+            playerFabPlayPauseDrawable.setPause(animate);
         } else {
-            playPauseDrawable.setPlay(animate);
+            playerFabPlayPauseDrawable.setPlay(animate);
         }
     }
 
+    private void setUpPlayPauseFab() {
+        playerFabPlayPauseDrawable = new PlayPauseDrawable(getActivity());
+
+        mPlayerPlayPauseFab.setImageDrawable(playerFabPlayPauseDrawable); // Note: set the drawable AFTER TintHelper.setTintAuto() was called
+        //playPauseFab.setColorFilter(MaterialValueHelper.getPrimaryTextColor(getContext(), ColorUtil.isColorLight(fabColor)), PorterDuff.Mode.SRC_IN);
+        mPlayerPlayPauseFab.setOnClickListener(new PlayPauseButtonOnClickHandler());
+        mPlayerPlayPauseFab.post(() -> {
+            if (mPlayerPlayPauseFab != null) {
+                mPlayerPlayPauseFab.setPivotX(mPlayerPlayPauseFab.getWidth() / 2);
+                mPlayerPlayPauseFab.setPivotY(mPlayerPlayPauseFab.getHeight() / 2);
+            }
+        });
+    }
+
     private void setUpMusicControllers() {
-        setUpPlayPauseButton();
+        setUpPlayPauseFab();
         setUpPrevNext();
         setUpRepeatButton();
         setUpShuffleButton();
@@ -180,145 +237,30 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
 
     private void setUpPrevNext() {
         updatePrevNextColor();
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MusicPlayerRemote.playNextSong(getContext());
-            }
-        });
-        prevButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MusicPlayerRemote.back(getContext());
-            }
-        });
+        //mPlayerNextButton.setOnClickListener(v -> MusicPlayerRemote.playNextSong());
+        //mPlayerPrevButton.setOnClickListener(v -> MusicPlayerRemote.back());
     }
 
     private void updateProgressTextColor() {
-        int color = MaterialValueHelper.getPrimaryTextColor(getContext(), false);
-        songTotalTime.setTextColor(color);
-        songCurrentProgress.setTextColor(color);
+        int color = MaterialValueHelper.getSecondaryTextColor(getContext(), false);
+        //songTotalTime.setTextColor(color);
+        //songCurrentProgress.setTextColor(color);
     }
 
     private void updatePrevNextColor() {
-        nextButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
-        prevButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
+        //mPlayerNextButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
+        //mPlayerPrevButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
     }
 
-    private void updatePlayPauseColor() {
-        playPauseButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
-    }
+    private void updateSong() {
+        //TransitionManager.beginDelayedTransition(viewGroup, new ChangeText().setChangeBehavior(ChangeText.CHANGE_BEHAVIOR_OUT_IN));
+        Song song = MusicPlayerRemote.getCurrentSong();
+        mTitle.setText(song.title);
+        mText.setText(song.artistName);
 
-    private void setUpShuffleButton() {
-        shuffleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MusicPlayerRemote.toggleShuffleMode();
-            }
-        });
-    }
-
-    private void updateShuffleState() {
-        switch (MusicPlayerRemote.getShuffleMode()) {
-            case MusicService.SHUFFLE_MODE_SHUFFLE:
-                shuffleButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
-                break;
-            default:
-                shuffleButton.setColorFilter(lastDisabledPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
-                break;
-        }
-    }
-
-    private void setUpRepeatButton() {
-        repeatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MusicPlayerRemote.cycleRepeatMode();
-            }
-        });
-    }
-
-    private void updateRepeatState() {
-        switch (MusicPlayerRemote.getRepeatMode()) {
-            case MusicService.REPEAT_MODE_NONE:
-                repeatButton.setImageResource(R.drawable.ic_repeat_white_24dp);
-                repeatButton.setColorFilter(lastDisabledPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
-                break;
-            case MusicService.REPEAT_MODE_ALL:
-                repeatButton.setImageResource(R.drawable.ic_repeat_white_24dp);
-                repeatButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
-                break;
-            case MusicService.REPEAT_MODE_THIS:
-                repeatButton.setImageResource(R.drawable.ic_repeat_one_white_24dp);
-                repeatButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
-                break;
-        }
-    }
-
-    public void show() {
-        if (hidden) {
-            if (musicControllerAnimationSet == null) {
-                TimeInterpolator interpolator = new FastOutSlowInInterpolator();
-                final int duration = 300;
-
-                LinkedList<Animator> animators = new LinkedList<>();
-
-                addAnimation(animators, playPauseButton, interpolator, duration, 0);
-                addAnimation(animators, nextButton, interpolator, duration, 100);
-                addAnimation(animators, prevButton, interpolator, duration, 100);
-                addAnimation(animators, shuffleButton, interpolator, duration, 200);
-                addAnimation(animators, repeatButton, interpolator, duration, 200);
-
-                musicControllerAnimationSet = new AnimatorSet();
-                musicControllerAnimationSet.playTogether(animators);
-            } else {
-                musicControllerAnimationSet.cancel();
-            }
-            musicControllerAnimationSet.start();
-        }
-
-        hidden = false;
-    }
-
-    public void hide() {
-        if (musicControllerAnimationSet != null) {
-            musicControllerAnimationSet.cancel();
-        }
-        prepareForAnimation(playPauseButton);
-        prepareForAnimation(nextButton);
-        prepareForAnimation(prevButton);
-        prepareForAnimation(shuffleButton);
-        prepareForAnimation(repeatButton);
-
-        hidden = true;
-    }
-
-    private static void addAnimation(Collection<Animator> animators, View view, TimeInterpolator interpolator, int duration, int delay) {
-        Animator scaleX = ObjectAnimator.ofFloat(view, View.SCALE_X, 0f, 1f);
-        scaleX.setInterpolator(interpolator);
-        scaleX.setDuration(duration);
-        scaleX.setStartDelay(delay);
-        animators.add(scaleX);
-
-        Animator scaleY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 0f, 1f);
-        scaleY.setInterpolator(interpolator);
-        scaleY.setDuration(duration);
-        scaleY.setStartDelay(delay);
-        animators.add(scaleY);
-    }
-
-    private static void prepareForAnimation(View view) {
-        if (view != null) {
-            view.setScaleX(0f);
-            view.setScaleY(0f);
-        }
     }
 
     private void setUpProgressSlider() {
-        int color = MaterialValueHelper.getPrimaryTextColor(getContext(), false);
-        progressSlider.getThumb().mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN);
-        progressSlider.getProgressDrawable().mutate().setColorFilter(Color.TRANSPARENT, PorterDuff.Mode.SRC_IN);
-
         progressSlider.setOnSeekBarChangeListener(new SimpleOnSeekbarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -331,10 +273,49 @@ public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment 
     }
 
     @Override
-    public void onUpdateProgressViews(int progress, int total) {
-        progressSlider.setMax(total);
-        progressSlider.setProgress(progress);
-        songTotalTime.setText(MusicUtil.getReadableDurationString(total));
-        songCurrentProgress.setText(MusicUtil.getReadableDurationString(progress));
+    public void onRepeatModeChanged() {
+        updateRepeatState();
     }
+
+    @Override
+    public void onShuffleModeChanged() {
+        updateShuffleState();
+    }
+
+    private void setUpRepeatButton() {
+        mPlayerRepeatButton.setOnClickListener(v -> MusicPlayerRemote.cycleRepeatMode());
+    }
+
+    private void updateRepeatState() {
+        switch (MusicPlayerRemote.getRepeatMode()) {
+            case MusicService.REPEAT_MODE_NONE:
+                mPlayerRepeatButton.setImageResource(R.drawable.ic_repeat_white_24dp);
+                mPlayerRepeatButton.setColorFilter(lastDisabledPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
+                break;
+            case MusicService.REPEAT_MODE_ALL:
+                mPlayerRepeatButton.setImageResource(R.drawable.ic_repeat_white_24dp);
+                mPlayerRepeatButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
+                break;
+            case MusicService.REPEAT_MODE_THIS:
+                mPlayerRepeatButton.setImageResource(R.drawable.ic_repeat_one_white_24dp);
+                mPlayerRepeatButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
+                break;
+        }
+    }
+
+    private void setUpShuffleButton() {
+        mPlayerShuffleButton.setOnClickListener(v -> MusicPlayerRemote.toggleShuffleMode());
+    }
+
+    private void updateShuffleState() {
+        switch (MusicPlayerRemote.getShuffleMode()) {
+            case MusicService.SHUFFLE_MODE_SHUFFLE:
+                mPlayerShuffleButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
+                break;
+            default:
+                mPlayerShuffleButton.setColorFilter(lastDisabledPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
+                break;
+        }
+    }
+
 }

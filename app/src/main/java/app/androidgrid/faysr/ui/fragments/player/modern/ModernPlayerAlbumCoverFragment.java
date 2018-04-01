@@ -94,7 +94,7 @@ public class ModernPlayerAlbumCoverFragment extends AbsMusicServiceFragment impl
 
     private Animation ROTATE_ANIM;
 
-    private ModernPlayerAlbumCoverFragment.Callbacks callbacks;
+    private Callbacks callbacks;
     private int currentPosition;
 
     private Lyrics lyrics;
@@ -335,7 +335,7 @@ public class ModernPlayerAlbumCoverFragment extends AbsMusicServiceFragment impl
         if (callbacks != null) callbacks.onColorChanged(color);
     }
 
-    public void setCallbacks(ModernPlayerAlbumCoverFragment.Callbacks listener) {
+    public void setCallbacks(Callbacks listener) {
         callbacks = listener;
     }
 

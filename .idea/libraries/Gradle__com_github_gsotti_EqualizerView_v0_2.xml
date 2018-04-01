@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.gsotti:EqualizerView-v0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/EqualizerView-v0.2.aar/2ee9ec1cb0ad670942582f67a72166ec/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/EqualizerView-v0.2.aar/2ee9ec1cb0ad670942582f67a72166ec/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.gsotti/EqualizerView/v0.2/43c7ed0fc7aba4f720ea4984f5d0432841c4945d/EqualizerView-v0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

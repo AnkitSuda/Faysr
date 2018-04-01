@@ -10,6 +10,7 @@
     android:transitionName="@string/transition_mini_player"
     tools:ignore="UnusedAttribute">
 
+
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/mini_shimmer_frame"
         android:layout_width="match_parent"

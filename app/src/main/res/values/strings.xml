@@ -145,7 +145,7 @@
     <string name="primary_color">Primary color</string>
     <string name="accent_color">Accent color</string>
     <string name="primary_color_desc">The primary theme color, defaults to indigo.</string>
-    <string name="accent_color_desc">The accent theme color, defaults to pink.</string>
+    <string name="accent_color_desc">The accent theme color, defaults to blue.</string>
     <string name="update_image">Update image</string>
     <string name="playlist_empty_text">Empty playlist</string>
     <string name="no_playlists">No playlists</string>
@@ -228,8 +228,8 @@
     <string name="pref_title_now_playing_screen_appearance">Appearance</string>
     <string name="intro_label">Introduction</string>
     <string name="welcome_to_faysr">"Welcome to Faysr, a beautiful and lightweight music player for Android. "</string>
-    <string name="open_playing_queue_instruction">Swipe the card in the now playing screen up to reveal the full playing queue.</string>
-    <string name="rearrange_playing_queue_instruction">Rearrange the playing queue by dragging a song from its track number.</string>
+    <string name="open_playing_queue_instruction">Click on Queue icon or Swipe the card in the now playing screen up to reveal the full playing queue.</string>
+    <string name="open_page_instruction">Change the Page via opening drawer and choosing a page.</string>
     <string name="library">Library</string>
     <string name="folders">Folders</string>
     <string name="saved_playlist_to">Saved playlist to %s.</string>
@@ -464,5 +464,11 @@
     <string name="support_dev">Support Development</string>
     <string name="queue">Queue</string>
     <string name="open_playing_queue">Open playing queue</string>
+    <string name="old_flat">Old Flat</string>
+    <string name="old_card">Old Card</string>
+    <string name="minimal">Minimal</string>
+    <string name="thanks_for_your_feedback_reset">Thanks for your feedback. <i>Reset!</i></string>
+    <string name="choose_a_song">Choose a song</string>
+    <string name="page_better">This page is still in development. We\'re working on it make it better.</string>
 
 </resources>

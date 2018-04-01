@@ -7,8 +7,10 @@ import app.androidgrid.faysr.R;
 
 public enum NowPlayingScreen {
     MODERN(R.string.modern, R.drawable.np_modern, 0),
-    CARD(R.string.card, R.drawable.np_card, 1),
-    FLAT(R.string.flat, R.drawable.np_flat, 2);
+    FLAT(R.string.flat, R.drawable.np_flat, 1),
+    Minimal(R.string.minimal, R.drawable.np_minimal, 2),
+    OLD_CARD(R.string.old_card, R.drawable.np_old_card, 3),
+    OLD_FLAT(R.string.old_flat, R.drawable.np_old_flat, 4);
 
     @StringRes
     public final int titleRes;

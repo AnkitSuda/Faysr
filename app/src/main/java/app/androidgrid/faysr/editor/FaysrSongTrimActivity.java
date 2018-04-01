@@ -38,13 +38,14 @@ import java.io.StringWriter;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.editor.soundfile.SoundFile;
 import app.androidgrid.faysr.helper.PlayPauseButtonOnClickHandler;
+import app.androidgrid.faysr.ui.activities.base.AbsBaseActivity;
 import app.androidgrid.faysr.views.PlayPauseDrawable;
 
 /**
  * Created by ankit on 3/12/17.
  */
 
-public class FaysrSongTrimActivity extends AppCompatActivity implements MarkerView.MarkerListener, WaveformView.WaveformListener {
+public class FaysrSongTrimActivity extends AbsBaseActivity implements MarkerView.MarkerListener, WaveformView.WaveformListener {
     private long mLoadingLastUpdateTime;
     private boolean mLoadingKeepGoing;
     private long mRecordingLastUpdateTime;
@@ -135,6 +136,9 @@ public class FaysrSongTrimActivity extends AppCompatActivity implements MarkerVi
         mLoadSoundFileThread = null;
         mRecordAudioThread = null;
         mSaveSoundFileThread = null;
+
+        setNavigationbarColorAuto();
+        setStatusbarColorAuto();
 
         Intent intent = getIntent();
 

@@ -9,6 +9,7 @@ import android.view.Window;
 
 import com.kabouzeid.appthemehelper.ATH;
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.color.MaterialColor;
 import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialDialogsUtil;
@@ -35,6 +36,32 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
                     .accentColorRes(R.color.md_blue_600)
                     .commit();
         }
+
+        String currentTheme = PreferenceUtil.getInstance(getApplicationContext()).getGeneralThemeNem();
+        switch (currentTheme) {
+            case "light":
+                if (ThemeStore.primaryColor(getApplicationContext()) != getResources().getColor(R.color.md_white_1000)) {
+                    ThemeStore.editTheme(getApplicationContext())
+                            .primaryColorRes(R.color.md_white_1000)
+                            .commit();
+                }
+                break;
+            case "dark":
+                if (ThemeStore.primaryColor(getApplicationContext()) != getResources().getColor(R.color.md_black_1000)) {
+                    ThemeStore.editTheme(getApplicationContext())
+                            .primaryColorRes(R.color.md_black_1000)
+                            .commit();
+                }
+                break;
+            case "black":
+                if (ThemeStore.primaryColor(getApplicationContext()) != getResources().getColor(R.color.md_black_1000)) {
+                    ThemeStore.editTheme(getApplicationContext())
+                            .primaryColorRes(R.color.md_black_1000)
+                            .commit();
+                }
+                break;
+        }
+
         getSharedPreferences("[[kabouzeid_app-theme-helper]]", 0).edit().putInt("activity_theme", PreferenceUtil.getInstance(this).getGeneralTheme()).commit(); // TEMPORARY FIX
         super.onCreate(savedInstanceState);
         MaterialDialogsUtil.updateMaterialDialogsThemeSingleton(this);

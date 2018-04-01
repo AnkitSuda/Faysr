@@ -1,6 +1,8 @@
 package app.androidgrid.faysr.adapter.song;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,12 +20,15 @@ import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.adapter.base.AbsMultiSelectAdapter;
 import app.androidgrid.faysr.adapter.base.MediaEntryViewHolder;
+import app.androidgrid.faysr.editor.FaysrSongTrimActivity;
+import app.androidgrid.faysr.editor.SongTrimSelectActivity;
 import app.androidgrid.faysr.glide.FaysrColoredTarget;
 import app.androidgrid.faysr.glide.SongGlideRequest;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.helper.menu.SongMenuHelper;
 import app.androidgrid.faysr.helper.menu.SongsMenuHelper;
 import app.androidgrid.faysr.interfaces.CabHolder;
+import app.androidgrid.faysr.loader.SongLoader;
 import app.androidgrid.faysr.model.Song;
 import app.androidgrid.faysr.util.MusicUtil;
 import app.androidgrid.faysr.util.NavigationUtil;
@@ -153,6 +158,7 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
                 });
     }
 
+
     protected String getSongTitle(Song song) {
         return song.title;
     }
@@ -186,6 +192,7 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
     public String getSectionName(int position) {
         return showSectionName ? MusicUtil.getSectionName(dataSet.get(position).title) : "";
     }
+
 
     public class ViewHolder extends MediaEntryViewHolder {
         protected int DEFAULT_MENU_RES = SongMenuHelper.MENU_RES;
@@ -242,7 +249,16 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
             if (isInQuickSelectMode()) {
                 toggleChecked(getAdapterPosition());
             } else {
-                MusicPlayerRemote.openQueue(dataSet, getAdapterPosition(), true);
+                if (activity instanceof SongTrimSelectActivity) {
+                    Bundle args = new Bundle();
+                    args.putBoolean("was_get_content_intent", false);
+                    args.putString("file", SongLoader.getSong(activity, getSong().id).data);
+                    Intent editorIntent = new Intent(activity, FaysrSongTrimActivity.class);
+                    editorIntent.putExtras(args);
+                    activity.startActivity(editorIntent);
+                } else {
+                    MusicPlayerRemote.openQueue(dataSet, getAdapterPosition(), true);
+                }
             }
         }
 

@@ -1,10 +1,44 @@
 {
     "logs": [
         {
-            "outputFile": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "J:\\AndroidGrid\\Faysr\\code\\Faysr\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d953850468c2d40a75aa94268a1b159/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "J:\\AndroidGrid\\Faysr\\code\\Faysr\\app\\src\\main\\res\\values-sw600dp\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "51",
+                        "endOffsets": "63"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "1212",
+                        "endColumns": "51",
+                        "endOffsets": "1259"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SUDA\\.gradle\\caches\\transforms-1\\files-1.1\\core-0.9.4.5.aar\\33f1a05edc39a08a952606c2f4738a2f\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endColumns": "41,51",
+                        "endOffsets": "92,144"
+                    },
+                    "to": {
+                        "startLines": "2,20",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,1264",
+                        "endColumns": "41,51",
+                        "endOffsets": "92,1311"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SUDA\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.0.aar\\ff12e0cd6073a9cc8aaab329c0741f7c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/res/values-sw600dp/integers.xml",
+                    "source": "J:\\AndroidGrid\\Faysr\\code\\Faysr\\app\\src\\main\\res\\values-sw600dp\\integers.xml",
                     "from": {
                         "startLines": "2,3,5,6,8,9",
                         "startColumns": "4,4,4,4,4,4",
@@ -40,41 +74,7 @@
                     }
                 },
                 {
-                    "source": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/res/values-sw600dp/dimens.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "51",
-                        "endOffsets": "63"
-                    },
-                    "to": {
-                        "startLines": "19",
-                        "startColumns": "4",
-                        "startOffsets": "1212",
-                        "endColumns": "51",
-                        "endOffsets": "1259"
-                    }
-                },
-                {
-                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/core-0.9.4.5.aar/b617069f416835eade5ddf849d977480/res/values-sw600dp-v13/values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,97",
-                        "endColumns": "41,51",
-                        "endOffsets": "92,144"
-                    },
-                    "to": {
-                        "startLines": "2,20",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,1264",
-                        "endColumns": "41,51",
-                        "endOffsets": "92,1311"
-                    }
-                },
-                {
-                    "source": "/home/ankit/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/a5422c3d994bef5b23272f27ab2dca7b/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\SUDA\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\ca06e22cf943d3933700f870722a3bfc\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

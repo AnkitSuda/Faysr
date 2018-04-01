@@ -22,8 +22,10 @@ import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.ui.fragments.player.AbsPlayerFragment;
 import app.androidgrid.faysr.ui.fragments.player.MiniPlayerFragment;
 import app.androidgrid.faysr.ui.fragments.player.NowPlayingScreen;
-import app.androidgrid.faysr.ui.fragments.player.card.CardPlayerFragment;
 import app.androidgrid.faysr.ui.fragments.player.flat.FlatPlayerFragment;
+import app.androidgrid.faysr.ui.fragments.player.minimal.MinimalPlayerFragment;
+import app.androidgrid.faysr.ui.fragments.player.old_card.OldCardPlayerFragment;
+import app.androidgrid.faysr.ui.fragments.player.old_flat.OldFlatPlayerFragment;
 import app.androidgrid.faysr.ui.fragments.player.modern.ModernPlayerFragment;
 import app.androidgrid.faysr.util.PreferenceUtil;
 import app.androidgrid.faysr.util.ViewUtil;
@@ -42,7 +44,7 @@ import butterknife.ButterKnife;
  *         {@link #wrapSlidingMusicPanel(int)} first and then return it in {@link #createContentView()}
  */
 public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivity implements BottomNavigationView.OnNavigationItemSelectedListener,
-        SlidingUpPanelLayout.PanelSlideListener, CardPlayerFragment.Callbacks {
+        SlidingUpPanelLayout.PanelSlideListener, OldCardPlayerFragment.Callbacks {
     public static final String TAG = AbsSlidingMusicPanelActivity.class.getSimpleName();
 
     @BindView(R.id.bottom_navigation)
@@ -72,14 +74,20 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
         currentNowPlayingScreen = PreferenceUtil.getInstance(this).getNowPlayingScreen();
         Fragment fragment; // must implement AbsPlayerFragment
         switch (currentNowPlayingScreen) {
-            case FLAT:
-                fragment = new FlatPlayerFragment();
-                break;
             case MODERN:
                 fragment = new ModernPlayerFragment();
                 break;
-            case CARD:
-                fragment = new CardPlayerFragment();
+            case FLAT:
+                fragment = new FlatPlayerFragment();
+                break;
+            case Minimal:
+                fragment = new MinimalPlayerFragment();
+                break;
+            case OLD_CARD:
+                fragment = new OldCardPlayerFragment();
+                break;
+            case OLD_FLAT:
+                fragment = new OldFlatPlayerFragment();
                 break;
             default:
                 fragment = new ModernPlayerFragment();

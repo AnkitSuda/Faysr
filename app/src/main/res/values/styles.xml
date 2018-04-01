@@ -47,6 +47,11 @@
         <item name="android:transitionName" tools:ignore="NewApi">toolbar</item>
     </style>
 
+    <style name="TranslucentActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
     <style name="Theme.Transparent" parent="android:Theme">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>

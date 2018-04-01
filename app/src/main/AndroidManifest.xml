@@ -265,7 +265,11 @@
             android:theme="@style/Theme.Phonograph.Base.Light" />
         <activity android:name=".ui.activities.SupportDevelopmentActivity" />
         <activity android:name=".ui.activities.PlayingQueueActivity" />
-        <activity android:name=".EmptyActivity"></activity>
+        <activity android:name=".EmptyActivity" />
+        <activity
+            android:name=".editor.SongTrimSelectActivity"
+            android:theme="@style/Theme.Phonograph.Light" />
+        <activity android:name=".ui.activities.share.MusicSharingActivity"></activity>
     </application>
 
 </manifest>

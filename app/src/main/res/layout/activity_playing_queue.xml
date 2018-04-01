@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/root"
-    android:background="@color/md_white_1000"
+    android:background="?android:windowBackground"
     android:layout_height="match_parent"
     android:orientation="vertical">
 

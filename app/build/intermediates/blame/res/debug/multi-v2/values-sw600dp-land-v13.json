@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-land-v13/values-sw600dp-land-v13.xml",
+            "outputFile": "J:\\AndroidGrid\\Faysr\\code\\Faysr\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-land-v13\\values-sw600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/media/ankit/Backups/AndroidGrid/Faysr/Faysr/app/src/main/res/values-sw600dp-land/dimens.xml",
+                    "source": "J:\\AndroidGrid\\Faysr\\code\\Faysr\\app\\src\\main\\res\\values-sw600dp-land\\dimens.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
