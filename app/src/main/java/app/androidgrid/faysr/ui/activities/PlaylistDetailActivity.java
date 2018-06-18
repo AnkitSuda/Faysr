@@ -3,6 +3,7 @@ package app.androidgrid.faysr.ui.activities;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.LinearLayoutManager;
@@ -38,6 +39,8 @@ import app.androidgrid.faysr.ui.activities.base.AbsSlidingMusicPanelActivity;
 import app.androidgrid.faysr.util.FaysrColorUtil;
 import app.androidgrid.faysr.util.PlaylistsUtil;
 import app.androidgrid.faysr.util.ViewUtil;
+
+import com.kabouzeid.appthemehelper.util.TintHelper;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.util.ArrayList;
@@ -45,6 +48,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.zhanghai.android.materialprogressbar.internal.ThemeUtils;
 
 public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity implements CabHolder, LoaderManager.LoaderCallbacks<ArrayList<Song>> {
 
@@ -61,6 +65,8 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
     Toolbar toolbar;
     @BindView(android.R.id.empty)
     TextView empty;
+    @BindView(R.id.action_shuffle)
+    FloatingActionButton fabShuffle;
 
     private Playlist playlist;
 
@@ -86,6 +92,9 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
         setTaskDescriptionColorAuto();
 
         playlist = getIntent().getExtras().getParcelable(EXTRA_PLAYLIST);
+
+        TintHelper.setTintAuto(fabShuffle, ThemeStore.accentColor(this), true);
+        fabShuffle.setOnClickListener(v -> MusicPlayerRemote.openAndShuffleQueue(adapter.getDataSet(), true));
 
         setUpRecyclerView();
 
@@ -158,9 +167,6 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id) {
-            case R.id.action_shuffle_playlist:
-                MusicPlayerRemote.openAndShuffleQueue(adapter.getDataSet(), true);
-                return true;
             case android.R.id.home:
                 onBackPressed();
                 return true;
@@ -226,7 +232,7 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         if (recyclerViewDragDropManager != null) {
             recyclerViewDragDropManager.release();
             recyclerViewDragDropManager = null;

@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.kabouzeid.appthemehelper.util.ColorUtil;
+import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 
 import java.util.ArrayList;
 
@@ -98,11 +100,11 @@ public class ModernAlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapte
         private Unbinder unbinder;
 
         @BindView(R.id.modern_player_image)
-        ImageView albumCover;
-        @BindView(R.id.modern_player_title)
-        TextView textTitle;
-        @BindView(R.id.modern_player_artist)
-        TextView textArtist;
+        CircleImageView albumCover;
+//        @BindView(R.id.modern_player_title)
+//        TextView textTitle;
+//        @BindView(R.id.modern_player_artist)
+//        TextView textArtist;
 
 
         private boolean isColorReady;
@@ -140,8 +142,8 @@ public class ModernAlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapte
 //            forceSquareAlbumCover(PreferenceUtil.getInstance(getContext()).forceSquareAlbumCover());
             PreferenceUtil.getInstance(getActivity()).registerOnSharedPreferenceChangedListener(this);
             loadAlbumCover();
-            setTitle(song.title);
-            setArtist(song.artistName);
+            /*setTitle(song.title);
+            setArtist(song.artistName);*/
         }
 
         @Override
@@ -164,14 +166,14 @@ public class ModernAlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapte
                         }
                     });
         }
-
+/*
         private void setTitle(String str) {
             textTitle.setText(str);
         }
 
         private void setArtist(String str) {
             textArtist.setText(str);
-        }
+        }*/
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
@@ -188,6 +190,7 @@ public class ModernAlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapte
         private void setColor(int color) {
             this.color = color;
             isColorReady = true;
+            albumCover.setBorderColor(MaterialValueHelper.getPrimaryTextColor(getContext(), ColorUtil.isColorLight(color)));
             if (colorReceiver != null) {
                 colorReceiver.onColorReady(color, request);
                 colorReceiver = null;

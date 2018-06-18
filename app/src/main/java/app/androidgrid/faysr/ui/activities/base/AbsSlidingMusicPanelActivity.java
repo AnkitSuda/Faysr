@@ -122,7 +122,7 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
                 }
             }
         });
-        
+
         setupBottomView();
         slidingUpPanelLayout.addPanelSlideListener(this);
     }
@@ -132,7 +132,8 @@ public abstract class AbsSlidingMusicPanelActivity extends AbsMusicServiceActivi
         mBottomNavigationView.enableAnimation(false);
         mBottomNavigationView.enableItemShiftingMode(false);
         mBottomNavigationView.enableShiftingMode(false);
-        mBottomNavigationView.setTextVisibility(false);
+        mBottomNavigationView.setTextVisibility(true);
+        mBottomNavigationView.setVisibility(View.GONE);
     }
 
     @Override

@@ -54,6 +54,10 @@ public class MediaEntryViewHolder extends RecyclerView.ViewHolder implements Vie
     @BindView(R.id.palette_color_container)
     public View paletteColorContainer;
 
+    @Nullable
+    @BindView(R.id.item_root)
+    public View itemRoot;
+
 
     public MediaEntryViewHolder(View itemView) {
         super(itemView);

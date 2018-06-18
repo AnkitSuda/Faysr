@@ -16,6 +16,7 @@ import app.androidgrid.faysr.editor.FaysrSongTrimActivity;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.loader.SongLoader;
 import app.androidgrid.faysr.model.Playlist;
+
 import app.androidgrid.faysr.ui.activities.AlbumDetailActivity;
 import app.androidgrid.faysr.ui.activities.ArtistDetailActivity;
 import app.androidgrid.faysr.ui.activities.PlayingQueueActivity;
@@ -75,4 +76,5 @@ public class NavigationUtil {
             }
         }
     }
+
 }

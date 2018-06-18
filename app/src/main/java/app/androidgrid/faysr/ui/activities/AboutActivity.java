@@ -26,6 +26,7 @@ import app.androidgrid.faysr.ui.activities.base.AbsBaseActivity;
 import app.androidgrid.faysr.ui.activities.bugreport.BugReportActivity;
 import app.androidgrid.faysr.ui.activities.intro.AppIntroActivity;
 
+import app.androidgrid.faysr.util.NavigationUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.psdev.licensesdialog.LicensesDialog;
@@ -196,12 +197,8 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
         } else if (v == rateOnGooglePlay) {
             openUrl(RATE_ON_GOOGLE_PLAY);
         } else if (v == donate) {
-//            if (App.isProVersion()) {
-//                DonationsDialog.create().show(getSupportFragmentManager(), "DONATION_DIALOG");
-//            } else {
-//                startActivity(new Intent(this, PurchaseActivity.class));
-//            }
-            Toast.makeText(this, R.string.donation_system_down, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, R.string.donation_system_down, Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, SupportDevelopmentActivity.class));
         }
     }
 

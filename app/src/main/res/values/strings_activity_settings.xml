@@ -1,16 +1,14 @@
 <resources>
     <string-array name="pref_start_page_list_titles">
         <item>@string/last_opened</item>
-        <item>@string/home</item>
         <item>@string/library</item>
         <item>@string/folders</item>
     </string-array>
 
     <string-array name="pref_start_page_list_values">
-        <item>-1</item>
+        <item>9</item>
         <item>0</item>
         <item>1</item>
-        <item>2</item>
     </string-array>
 
     <string-array name="pref_general_theme_list_titles">

@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatImageButton;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,13 +23,16 @@ import app.androidgrid.faysr.adapter.base.AbsMultiSelectAdapter;
 import app.androidgrid.faysr.adapter.base.MediaEntryViewHolder;
 import app.androidgrid.faysr.editor.FaysrSongTrimActivity;
 import app.androidgrid.faysr.editor.SongTrimSelectActivity;
+import app.androidgrid.faysr.glide.BlurTransformation;
 import app.androidgrid.faysr.glide.FaysrColoredTarget;
+import app.androidgrid.faysr.glide.RoundedCornersTransformation;
 import app.androidgrid.faysr.glide.SongGlideRequest;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.helper.menu.SongMenuHelper;
 import app.androidgrid.faysr.helper.menu.SongsMenuHelper;
 import app.androidgrid.faysr.interfaces.CabHolder;
 import app.androidgrid.faysr.loader.SongLoader;
+import app.androidgrid.faysr.loader.TopAndRecentlyPlayedTracksLoader;
 import app.androidgrid.faysr.model.Song;
 import app.androidgrid.faysr.util.MusicUtil;
 import app.androidgrid.faysr.util.NavigationUtil;
@@ -141,6 +145,7 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
         SongGlideRequest.Builder.from(Glide.with(activity), song)
                 .checkIgnoreMediaStore(activity)
                 .generatePalette(activity).build()
+                //.transform(new RoundedCornersTransformation(activity))
                 .into(new FaysrColoredTarget(holder.image) {
                     @Override
                     public void onLoadCleared(Drawable placeholder) {
@@ -197,9 +202,17 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
     public class ViewHolder extends MediaEntryViewHolder {
         protected int DEFAULT_MENU_RES = SongMenuHelper.MENU_RES;
 
+        public AppCompatImageButton q0;
+        public AppCompatImageButton q1;
+        public AppCompatImageButton q2;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             setImageTransitionName(activity.getString(R.string.transition_album_art));
+
+            q0 = itemView.findViewById(R.id.quick0);
+            q1 = itemView.findViewById(R.id.quick1);
+            q2 = itemView.findViewById(R.id.quick2);
 
             if (menu == null) {
                 return;
@@ -261,7 +274,17 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
                 }
             }
         }
+        public void onQuick0(View view) {
+            MusicPlayerRemote.openAndShuffleQueue(dataSet, true);
+        }
 
+        public void onQuick1(View view) {
+            MusicPlayerRemote.openQueue(TopAndRecentlyPlayedTracksLoader.getRecentlyPlayedTracks(activity), 0, true);
+        }
+
+        public void onQuick2(View view) {
+            MusicPlayerRemote.openQueue(TopAndRecentlyPlayedTracksLoader.getTopTracks(activity), 0, true);
+        }
         @Override
         public boolean onLongClick(View view) {
             return toggleChecked(getAdapterPosition());

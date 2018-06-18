@@ -23,6 +23,7 @@ import com.bumptech.glide.Glide;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
+import com.transitionseverywhere.TransitionManager;
 
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.glide.SongGlideRequest;
@@ -30,6 +31,7 @@ import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.helper.MusicProgressViewUpdateHelper;
 import app.androidgrid.faysr.helper.PlayPauseButtonOnClickHandler;
 import app.androidgrid.faysr.model.Song;
+import app.androidgrid.faysr.transitions.ProgressTransition;
 import app.androidgrid.faysr.ui.fragments.AbsMusicServiceFragment;
 import app.androidgrid.faysr.views.PlayPauseDrawable;
 
@@ -101,9 +103,9 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
         progressBar.setVisibility(View.VISIBLE);
     }
 
-    public static void setGravityToTop(boolean b) {
+    public static void setGravityToBottom(boolean b) {
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, progressBar.getHeight());
-        params.gravity = b ? Gravity.TOP : Gravity.BOTTOM;
+        params.gravity = b ? Gravity.BOTTOM : Gravity.TOP;
 
         progressBar.setLayoutParams(params);
     }
@@ -117,6 +119,11 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
 
     private void updateSongTitle() {
         miniPlayerTitle.setText(MusicPlayerRemote.getCurrentSong().title);
+    }
+
+    public void setColor(int playerFragmentColor) {
+        //noinspection ConstantConditions
+        getView().setBackgroundColor(playerFragmentColor);
     }
 
     @Override
@@ -137,6 +144,7 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
 
     @Override
     public void onUpdateProgressViews(int progress, int total) {
+        TransitionManager.beginDelayedTransition(shimmerFrameLayout, new ProgressTransition());
         progressBar.setMax(total);
         progressBar.setProgress(progress);
     }
@@ -164,11 +172,11 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
                     if (Math.abs(velocityX) > Math.abs(velocityY)) {
                         if (velocityX < 0) {
                             MusicPlayerRemote.playNextSong(context);
-                            animateShimmer(true);
+                            //animateShimmer(true); // Not using right now
                             return true;
                         } else if (velocityX > 0) {
                             MusicPlayerRemote.playPreviousSong(context);
-                            animateShimmer(false);
+                            //animateShimmer(false); // Not using right now
                             return true;
                         }
                     }

@@ -1,6 +1,5 @@
 package app.androidgrid.faysr.adapter.song;
 
-import android.graphics.Typeface;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,12 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
+
+import java.util.ArrayList;
+
 import app.androidgrid.faysr.R;
+import app.androidgrid.faysr.adapter.song.AbsOffsetSongAdapter;
+import app.androidgrid.faysr.adapter.song.SongAdapter;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.interfaces.CabHolder;
 import app.androidgrid.faysr.model.Song;
-
-import java.util.ArrayList;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)
@@ -21,12 +23,12 @@ import java.util.ArrayList;
 public class ShuffleButtonSongAdapter extends AbsOffsetSongAdapter {
 
     public ShuffleButtonSongAdapter(AppCompatActivity activity, ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
-        super(activity, dataSet, itemLayoutRes, usePalette, cabHolder);
+        super(false, activity, dataSet, itemLayoutRes, usePalette, cabHolder);
     }
 
     @Override
     protected SongAdapter.ViewHolder createViewHolder(View view) {
-        return new ShuffleButtonSongAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -34,9 +36,9 @@ public class ShuffleButtonSongAdapter extends AbsOffsetSongAdapter {
         if (holder.getItemViewType() == OFFSET_ITEM) {
             int accentColor = ThemeStore.accentColor(activity);
             if (holder.title != null) {
-                holder.title.setText(activity.getResources().getString(R.string.action_shuffle_all).toUpperCase());
+                holder.title.setText(activity.getResources().getString(R.string.action_shuffle_all));
                 holder.title.setTextColor(accentColor);
-                holder.title.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
+
             }
             if (holder.text != null) {
                 holder.text.setVisibility(View.GONE);

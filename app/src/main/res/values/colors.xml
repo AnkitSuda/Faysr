@@ -5,6 +5,8 @@
 
     <color name="dark_primary">#232323</color>
 
+    <color name="windowColor">?attr/windowBg</color>
+
     <color name="app_shortcut_default_foreground">#607d8b</color>
     <color name="app_shortcut_default_background">#f5f5f5</color>
     <color name="gray">#ffff</color>
@@ -27,4 +29,9 @@
     <color name="overlay_dark_50">#80000000</color>
     <color name="overlay_dark_modern">#64000000</color>
     <color name="white_blue_combo_blue_color">#2979FF</color>
+    <color name="placeholder_bg">#f1f3f4</color>
+    <color name="placeholder_bg_dark">#4b4f52</color>
+    <color name="placeholder_bg_focus">#e8eff2</color>
+    <color name="placeholder_bg_dark_focus">#3e4448</color>
+
 </resources>

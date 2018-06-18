@@ -139,11 +139,11 @@ public class ModernPlayerAlbumCoverFragment extends AbsMusicServiceFragment impl
         progressViewUpdateHelper = new MusicProgressViewUpdateHelper(this, 500, 1000);
         progressViewUpdateHelper.start();
         if (ModernPlayerFragment.toolbar != null)
-        if (ModernPlayerFragment.toolbar.getVisibility() == View.GONE) {
-            artShadowSecond.setVisibility(View.GONE);
-        } else {
-            artShadowSecond.setVisibility(View.VISIBLE);
-        }
+            if (ModernPlayerFragment.toolbar.getVisibility() == View.GONE) {
+                artShadowSecond.setVisibility(View.GONE);
+            } else {
+                artShadowSecond.setVisibility(View.VISIBLE);
+            }
 
     }
 
@@ -237,11 +237,11 @@ public class ModernPlayerAlbumCoverFragment extends AbsMusicServiceFragment impl
 
 
     public AnimatorSet createShadowColorChangeAnimatorSet(int newColor) {
-        Animator backgroundAnimator = ViewUtil.createBackgroundColorTransition(artShadow, ModernPlayerFragment.lastColor, newColor);
-        Animator statusBarAnimator = ViewUtil.createBackgroundColorTransition(darkOverlay, ModernPlayerFragment.lastColor, newColor);
+        Animator artAnimator = ViewUtil.createBackgroundColorTransition(artShadow, ModernPlayerFragment.lastColor, newColor);
+        Animator overlayAnimator = ViewUtil.createBackgroundColorTransition(darkOverlay, ModernPlayerFragment.lastColor, newColor);
 
         AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playTogether(backgroundAnimator, statusBarAnimator);
+        animatorSet.playTogether(artAnimator, overlayAnimator);
 
         if (!ATHUtil.isWindowBackgroundDark(getActivity())) {
             int adjustedLastColor = ColorUtil.isColorLight(ModernPlayerFragment.lastColor) ? ColorUtil.darkenColor(ModernPlayerFragment.lastColor) : ModernPlayerFragment.lastColor;

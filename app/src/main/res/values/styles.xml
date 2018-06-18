@@ -28,7 +28,7 @@
     </style>
 
     <style name="Toolbar">
-        <item name="titleMarginStart">16dp</item>
+        <item name="titleMarginStart">0dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?actionBarSize</item>
         <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
@@ -112,5 +112,39 @@
         <item name="android:background">#000022</item>
     </style>
 
+    <style name="p2p_switch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#46bdbf</item>
 
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#cccccc
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#ffffff</item>
+    </style>
+
+    <style name="TabBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_height">@dimen/tab_height</item>
+        <item name="tabIndicatorHeight">3.0dip</item>
+        <item name="tabBackground">@android:color/transparent</item>
+        <item name="tabMode">scrollable</item>
+        <item name="tabGravity">center</item>
+        <item name="tabMinWidth">0.0dip</item>
+        <item name="tabPaddingStart">8.0dip</item>
+        <item name="tabPaddingEnd">8.0dip</item>
+    </style>
+
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
 </resources>

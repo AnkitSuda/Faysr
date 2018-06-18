@@ -119,7 +119,7 @@ public final class PreferenceUtil {
     }
 
     public final int getDefaultStartPage() {
-        return Integer.parseInt(mPreferences.getString(DEFAULT_START_PAGE, "-1"));
+        return Integer.parseInt(mPreferences.getString(DEFAULT_START_PAGE, "0"));
     }
 
     public void setLastPage(final int value) {
@@ -129,7 +129,7 @@ public final class PreferenceUtil {
     }
 
     public final int getLastPage() {
-        return mPreferences.getInt(LAST_PAGE, 0);
+        return mPreferences.getInt(LAST_PAGE, 1);
     }
 
     public void setTabIcons(final boolean value) {

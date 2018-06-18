@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
 
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.adapter.PlaylistAdapter;
@@ -16,6 +17,7 @@ import app.androidgrid.faysr.model.Playlist;
 import app.androidgrid.faysr.model.smartplaylist.HistoryPlaylist;
 import app.androidgrid.faysr.model.smartplaylist.LastAddedPlaylist;
 import app.androidgrid.faysr.model.smartplaylist.MyTopTracksPlaylist;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.LibraryFragment;
 
 import java.util.ArrayList;
 
@@ -39,6 +41,12 @@ public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<Playl
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         getLoaderManager().initLoader(LOADER_ID, null, this);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        LibraryFragment.setToolbarTitle(getString(R.string.playlists));
     }
 
     @NonNull

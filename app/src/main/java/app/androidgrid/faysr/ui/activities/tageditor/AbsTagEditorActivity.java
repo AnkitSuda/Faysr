@@ -270,7 +270,7 @@ public abstract class AbsTagEditorActivity extends AbsBaseActivity {
         paletteColorPrimary = color;
         observableScrollViewCallbacks.onScrollChanged(observableScrollView.getCurrentScrollY(), false, false);
         header.setBackgroundColor(paletteColorPrimary);
-        setStatusbarColor(paletteColorPrimary);
+        setStatusbarColor(paletteColorPrimary, false);
         setNavigationbarColor(paletteColorPrimary);
         setTaskDescriptionColor(paletteColorPrimary);
     }

@@ -13,10 +13,12 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NETWORK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
-    <!-- <uses-permission android:name="android.permission.WRITE_CONTACTS" /> -->
-    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO"/> -->
     <application
         android:name=".App"
         android:allowBackup="false"
@@ -206,8 +208,6 @@
                 android:resource="@xml/app_widget_card_info" />
         </receiver>
 
-        <activity android:name=".ui.activities.PurchaseActivity" />
-
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}"
@@ -263,13 +263,19 @@
         <activity
             android:name=".editor.FaysrSongTrimActivity"
             android:theme="@style/Theme.Phonograph.Base.Light" />
-        <activity android:name=".ui.activities.SupportDevelopmentActivity" />
+        <activity android:name=".ui.activities.SupportDevelopmentActivity"
+            android:label="@string/support_development"/>
         <activity android:name=".ui.activities.PlayingQueueActivity" />
         <activity android:name=".EmptyActivity" />
         <activity
             android:name=".editor.SongTrimSelectActivity"
             android:theme="@style/Theme.Phonograph.Light" />
-        <activity android:name=".ui.activities.share.MusicSharingActivity"></activity>
+        <activity android:name=".ui.activities.share.MusicSharingActivity" />
+        <activity
+            android:name=".sharing.ui.ShareActivity"
+            android:label="@string/music_sharing" />
+        <activity android:name=".sharing.ui.ShareSenderActivity"></activity>
+        <activity android:name=".sharing.ui.receiver.ReceiverActivity" />
     </application>
 
 </manifest>

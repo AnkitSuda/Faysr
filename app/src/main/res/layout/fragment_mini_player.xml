@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/mini_player_height"
-    android:background="?cardBackgroundColor"
+    android:background="?android:windowBackground"
     android:clickable="true"
     android:focusable="false"
     android:transitionName="@string/transition_mini_player"
@@ -44,6 +44,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:singleLine="true"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
             <app.androidgrid.faysr.views.IconImageView
@@ -64,8 +65,9 @@
             style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:layout_gravity="bottom"
+            android:layout_gravity="top"
             app:mpb_progressStyle="horizontal"
+            app:mpb_showProgressBackground="false"
             app:mpb_useIntrinsicPadding="false" />
     </com.facebook.shimmer.ShimmerFrameLayout>
 

@@ -1,16 +1,21 @@
 package app.androidgrid.faysr.adapter.song;
 
+import android.graphics.PorterDuff;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatImageButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.kabouzeid.appthemehelper.ThemeStore;
+
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.interfaces.CabHolder;
+import app.androidgrid.faysr.loader.TopAndRecentlyPlayedTracksLoader;
 import app.androidgrid.faysr.model.Song;
 
 import java.util.ArrayList;
@@ -23,19 +28,25 @@ public abstract class AbsOffsetSongAdapter extends SongAdapter {
     protected static final int OFFSET_ITEM = 0;
     protected static final int SONG = 1;
 
-    public AbsOffsetSongAdapter(AppCompatActivity activity, ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
+    public boolean isQuickActions;
+
+    public AbsOffsetSongAdapter(boolean isQuickActions, AppCompatActivity activity, ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder) {
         super(activity, dataSet, itemLayoutRes, usePalette, cabHolder);
+        this.isQuickActions = isQuickActions;
     }
 
-    public AbsOffsetSongAdapter(AppCompatActivity activity, ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder, boolean showSectionName) {
+    public AbsOffsetSongAdapter(boolean isQuickActions, AppCompatActivity activity, ArrayList<Song> dataSet, @LayoutRes int itemLayoutRes, boolean usePalette, @Nullable CabHolder cabHolder, boolean showSectionName) {
         super(activity, dataSet, itemLayoutRes, usePalette, cabHolder, showSectionName);
+        this.isQuickActions = isQuickActions;
     }
+
+
 
     @NonNull
     @Override
     public SongAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == OFFSET_ITEM) {
-            View view = LayoutInflater.from(activity).inflate(R.layout.item_list_single_row, parent, false);
+            View view = LayoutInflater.from(activity).inflate(isQuickActions ? R.layout.songs_quick_item_list : R.layout.item_list, parent, false);
             return createViewHolder(view);
         }
         return super.onCreateViewHolder(parent, viewType);
@@ -80,9 +91,14 @@ public abstract class AbsOffsetSongAdapter extends SongAdapter {
     }
 
     public class ViewHolder extends SongAdapter.ViewHolder {
+        public AppCompatImageButton m0;
+        public AppCompatImageButton m1;
+        public AppCompatImageButton m2;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
+
         }
 
         @Override
@@ -95,6 +111,7 @@ public abstract class AbsOffsetSongAdapter extends SongAdapter {
         public void onClick(View v) {
             if (isInQuickSelectMode() && getItemViewType() != OFFSET_ITEM) {
                 toggleChecked(getAdapterPosition());
+
             } else {
                 MusicPlayerRemote.openQueue(dataSet, getAdapterPosition() - 1, true);
             }

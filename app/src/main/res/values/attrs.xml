@@ -5,6 +5,11 @@
     <attr name="rectSelector" format="reference" />
     <attr name="rectSelectorStrong" format="reference" />
 
+    <attr name="windowBg" format="reference" />
+    <attr name="normalNavigationBarColor" format="reference" />
+    <attr name="darkNavigationBarColor" format="reference" />
+    <attr name="shouldUseDarkIconNavBar" format="boolean" />
+
     <attr name="defaultFooterColor" format="color" />
 
     <attr name="toolbarPopupTheme" format="reference" />

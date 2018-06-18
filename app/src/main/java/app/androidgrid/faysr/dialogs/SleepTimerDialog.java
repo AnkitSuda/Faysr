@@ -21,7 +21,6 @@ import com.afollestad.materialdialogs.internal.ThemeSingleton;
 import app.androidgrid.faysr.App;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.service.MusicService;
-import app.androidgrid.faysr.ui.activities.PurchaseActivity;
 import app.androidgrid.faysr.util.MusicUtil;
 import app.androidgrid.faysr.util.PreferenceUtil;
 import com.triggertrap.seekarc.SeekArc;
@@ -61,11 +60,6 @@ public class SleepTimerDialog extends DialogFragment {
                         if (getActivity() == null) {
                             return;
                         }
-//                        if (!App.isProVersion()) {
-//                            Toast.makeText(getActivity(), getString(R.string.sleep_timer_is_a_pro_feature), Toast.LENGTH_LONG).show();
-//                            startActivity(new Intent(getContext(), PurchaseActivity.class));
-//                            return;
-//                        }
 
                         final int minutes = seekArcProgress;
 

@@ -1,8 +1,6 @@
 package app.androidgrid.faysr.ui.fragments.player.modern;
 
 
-import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -13,13 +11,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.kabouzeid.appthemehelper.util.TintHelper;
+import com.transitionseverywhere.ChangeText;
+import com.transitionseverywhere.Recolor;
+import com.transitionseverywhere.TransitionManager;
 
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
@@ -28,18 +30,12 @@ import app.androidgrid.faysr.helper.PlayPauseButtonOnClickHandler;
 import app.androidgrid.faysr.misc.SimpleOnSeekbarChangeListener;
 import app.androidgrid.faysr.service.MusicService;
 import app.androidgrid.faysr.ui.fragments.AbsMusicServiceFragment;
-import app.androidgrid.faysr.ui.fragments.player.PlayerAlbumCoverFragment;
 import app.androidgrid.faysr.util.MusicUtil;
 import app.androidgrid.faysr.views.PlayPauseDrawable;
 import app.androidgrid.faysr.visualizer.view.BarVisualizer;
-import app.androidgrid.faysr.visualizer.view.BlazingColorVisualizer;
-import app.androidgrid.faysr.visualizer.view.CircleBarVisualizer;
-import app.androidgrid.faysr.visualizer.view.CircleVisualizer;
-import butterknife.BindAnim;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import me.zhanghai.android.materialprogressbar.internal.ThemeUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,6 +53,13 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     ImageButton repeatButton;
     @BindView(R.id.player_shuffle_button)
     ImageButton shuffleButton;
+
+    @BindView(R.id.texts_container)
+    LinearLayout textContainer;
+    @BindView(R.id.player_media_controller_container)
+    RelativeLayout medialContainer;
+    @BindView(R.id.player_media_controller_container_1)
+    RelativeLayout medialContainerSec;
 
     @BindView(R.id.player_progress_slider)
     SeekBar progressSlider;
@@ -97,6 +100,7 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
         unbinder = ButterKnife.bind(this, view);
         setUpMusicControllers();
         updateProgressTextColor(false);
+        updateTextsColor(false);
     }
 
     private void setUpVisualizer() {
@@ -183,6 +187,7 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
 
 
     public void setUpPlayPauseFab(int fabColor) {
+
         playPauseFab.setBackgroundColor(fabColor);
         TintHelper.setTintAuto(playPauseFab, fabColor, true);
 
@@ -236,12 +241,16 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     }
 
     private void updateProgressTextColor(boolean dark) {
+        TransitionManager.beginDelayedTransition(medialContainer, new Recolor());
+
         int color = MaterialValueHelper.getPrimaryTextColor(getContext(), dark);
         songTotalTime.setTextColor(color);
         songCurrentProgress.setTextColor(color);
     }
 
     private void updateTextsColor(boolean dark) {
+        //TransitionManager.beginDelayedTransition(medialContainer, new Recolor());
+
         int titleColor = MaterialValueHelper.getPrimaryTextColor(getContext(), dark);
         int artistColor = MaterialValueHelper.getSecondaryTextColor(getContext(), dark);
         title.setTextColor(titleColor);
@@ -249,6 +258,8 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     }
 
     private void updatePrevNextColor() {
+        TransitionManager.beginDelayedTransition(medialContainer, new Recolor());
+
         nextButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
         prevButton.setColorFilter(lastPlaybackControlsColor, PorterDuff.Mode.SRC_IN);
     }
@@ -283,6 +294,8 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     }
 
     private void updateRepeatState() {
+        TransitionManager.beginDelayedTransition(medialContainerSec, new Recolor());
+
         switch (MusicPlayerRemote.getRepeatMode()) {
             case MusicService.REPEAT_MODE_NONE:
                 repeatButton.setImageResource(R.drawable.ic_repeat_white_24dp);
@@ -300,7 +313,9 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     }
 
     private void updateTexts() {
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) return;
+        TransitionManager.beginDelayedTransition(textContainer,
+                new ChangeText().setChangeBehavior(ChangeText.CHANGE_BEHAVIOR_IN));
+
         title.setText(MusicPlayerRemote.getCurrentSong().title);
         artist.setText(MusicPlayerRemote.getCurrentSong().artistName);
     }
@@ -323,6 +338,7 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     }
 
     private void setUpProgressSlider() {
+
         int color = MaterialValueHelper.getPrimaryTextColor(getContext(), false);
         progressSlider.getThumb().mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN);
         progressSlider.getProgressDrawable().mutate().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
@@ -339,6 +355,8 @@ public class ModernPlayerPlaybackControlsFragment extends AbsMusicServiceFragmen
     }
 
     private void updateProgressSliderColor(boolean dark) {
+        TransitionManager.beginDelayedTransition(medialContainerSec, new Recolor());
+
         int color = MaterialValueHelper.getPrimaryTextColor(getContext(), dark);
         progressSlider.getThumb().mutate().setColorFilter(color, PorterDuff.Mode.SRC_IN);
         progressSlider.getProgressDrawable().mutate().setColorFilter(ColorUtil.lightenColor(color), PorterDuff.Mode.SRC_IN);

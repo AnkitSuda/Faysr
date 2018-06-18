@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?android:windowBackground"
     android:transitionGroup="true"
+    android:id="@+id/root"
+    android:orientation="vertical"
     tools:ignore="UnusedAttribute">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_height="wrap_content">
         <include layout="@layout/status_bar" />
+    </FrameLayout>
 
-        <FrameLayout
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?colorPrimary"
+            android:stateListAnimator="@null"
             android:elevation="@dimen/toolbar_elevation"
             tools:ignore="UnusedAttribute">
 
@@ -31,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize" />
 
-        </FrameLayout>
+        </android.support.design.widget.AppBarLayout>
 
         <TextView
             android:id="@android:id/empty"
@@ -43,6 +52,7 @@
             android:text="@string/playlist_empty_text"
             android:textColor="?android:textColorSecondary"
             android:textSize="@dimen/empty_text_size"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:visibility="gone" />
 
         <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
@@ -50,8 +60,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:scrollbars="none" />
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-    </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/action_shuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_shuffle_white_24dp"
+            app:layout_behavior="app.androidgrid.faysr.misc.ScrollAwareFABBehavior"/>
+    </android.support.design.widget.CoordinatorLayout>
 
-</FrameLayout>
+</LinearLayout>

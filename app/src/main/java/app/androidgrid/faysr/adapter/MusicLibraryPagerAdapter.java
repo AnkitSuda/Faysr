@@ -10,8 +10,8 @@ import android.util.SparseArray;
 import android.view.ViewGroup;
 
 import app.androidgrid.faysr.R;
-import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.AlbumsFragment;
-import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.ArtistsFragment;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.creators.AlbumsFragment;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.creators.ArtistsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.PlaylistsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.SongsFragment;
 import app.androidgrid.faysr.util.PreferenceUtil;

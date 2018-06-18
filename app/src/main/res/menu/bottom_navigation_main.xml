@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_home_24px"
+        android:title="@string/for_you" />
+    <item
         android:id="@+id/action_song"
         android:enabled="true"
-        android:icon="@drawable/ic_music_note_white_24dp"
-        android:title="@string/songs" />
+        android:icon="@drawable/ic_outline_music_note_24px"
+        android:title="@string/library" />
+    <item
+        android:id="@+id/action_creators"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_local_offer_24px"
+        android:title="@string/action_meta" />
+    <item
+        android:id="@+id/action_playlist"
+        android:enabled="true"
+        android:icon="@drawable/ic_newsstand_24"
+        android:title="@string/playlists" />
+ <!--   &lt;!&ndash; Hidden items &ndash;&gt;
     <item
         android:id="@+id/action_album"
-        android:enabled="true"
+        android:enabled="false"
+        android:visible="false"
         android:icon="@drawable/ic_album_white_24dp"
         android:title="@string/albums" />
     <item
         android:id="@+id/action_artist"
-        android:enabled="true"
+        android:enabled="false"
+        android:visible="false"
         android:icon="@drawable/ic_person_white_24dp"
-        android:title="@string/artists" />
-    <item
-        android:id="@+id/action_playlist"
-        android:enabled="true"
-        android:icon="@drawable/ic_favorite_white_24dp"
-        android:title="@string/for_you" />
+        android:title="@string/artists" />-->
+
 </menu>

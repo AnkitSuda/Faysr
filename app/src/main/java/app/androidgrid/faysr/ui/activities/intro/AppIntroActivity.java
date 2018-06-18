@@ -3,8 +3,10 @@ package app.androidgrid.faysr.ui.activities.intro;
 import android.os.Bundle;
 
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
+import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
 import app.androidgrid.faysr.R;
+
 import app.androidgrid.faysr.ui.fragments.player.NowPlayingScreen;
 
 /**
@@ -16,11 +18,12 @@ public class AppIntroActivity extends IntroActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setButtonCtaVisible(true);
-        setButtonNextVisible(false);
-        setButtonBackVisible(false);
+        setButtonCtaVisible(false);
+        setButtonNextVisible(true);
+        setButtonBackVisible(true);
 
         setButtonCtaTintMode(BUTTON_CTA_TINT_MODE_TEXT);
+
 
         addSlide(new SimpleSlide.Builder()
                 .title(R.string.app_name)
@@ -47,4 +50,15 @@ public class AppIntroActivity extends IntroActivity {
                 .layout(R.layout.fragment_simple_slide_large_image)
                 .build());
     }
+
+ /*   private void setUpSlides() {
+        addSlide(new SimpleSlide.Builder()
+                .title(R.string.app_name)
+                .description(R.string.welcome_to_faysr)
+                .image(R.drawable.icon_web)
+                .background(R.color.md_blue_grey_100)
+                .backgroundDark(R.color.md_blue_grey_200)
+                .layout(R.layout.fragment_intro_slide_one)
+                .build());
+    }*/
 }

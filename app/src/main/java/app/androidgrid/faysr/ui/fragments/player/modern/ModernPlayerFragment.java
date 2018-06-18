@@ -41,6 +41,7 @@ import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+import com.transitionseverywhere.TransitionManager;
 
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.adapter.ModernAlbumCoverPagerAdapter;
@@ -201,7 +202,7 @@ public class ModernPlayerFragment extends AbsPlayerFragment implements ModernPla
     }
 
     private void setUpPlayerToolbar() {
-        toolbar.inflateMenu(R.menu.menu_player);
+        toolbar.inflateMenu(R.menu.menu_player_full);
         toolbar.setNavigationIcon(R.drawable.ic_close_white_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -385,9 +386,10 @@ public class ModernPlayerFragment extends AbsPlayerFragment implements ModernPla
 
     @Override
     public void onToolbarToggled() {
+        TransitionManager.beginDelayedTransition(root);
         toggleToolbar(toolbarContainer);
         if (playerAlbumCoverFragment.artShadowSecond != null)
-        playerAlbumCoverFragment.artShadowSecond.setVisibility(isToolbarShown() ? View.VISIBLE : View.GONE);
+            playerAlbumCoverFragment.artShadowSecond.setVisibility(isToolbarShown() ? View.VISIBLE : View.GONE);
     }
 
 //    @Override
@@ -431,7 +433,7 @@ public class ModernPlayerFragment extends AbsPlayerFragment implements ModernPla
         Animator visualizerAnimator = ViewUtil.createColorFilterTransition(playbackControlsFragment.visualizer, ColorUtil.shiftColor(lastColor, 0.8f), ColorUtil.shiftColor(newColor, 0.8f));
 
         AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playTogether(rootAnimator, backgroundAnimator, statusBarAnimator, visualizerAnimator, shadowAnimator, getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? sShadowAnimator : shadowAnimator, overlayAnimator);
+        animatorSet.playTogether(rootAnimator, backgroundAnimator, statusBarAnimator, visualizerAnimator, sShadowAnimator, shadowAnimator, overlayAnimator);
 
         if (!ATHUtil.isWindowBackgroundDark(getActivity())) {
             int adjustedLastColor = ColorUtil.isColorLight(lastColor) ? ColorUtil.darkenColor(lastColor) : lastColor;

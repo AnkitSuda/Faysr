@@ -37,32 +37,8 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
                     .commit();
         }
 
-        String currentTheme = PreferenceUtil.getInstance(getApplicationContext()).getGeneralThemeNem();
-        switch (currentTheme) {
-            case "light":
-                if (ThemeStore.primaryColor(getApplicationContext()) != getResources().getColor(R.color.md_white_1000)) {
-                    ThemeStore.editTheme(getApplicationContext())
-                            .primaryColorRes(R.color.md_white_1000)
-                            .commit();
-                }
-                break;
-            case "dark":
-                if (ThemeStore.primaryColor(getApplicationContext()) != getResources().getColor(R.color.md_black_1000)) {
-                    ThemeStore.editTheme(getApplicationContext())
-                            .primaryColorRes(R.color.md_black_1000)
-                            .commit();
-                }
-                break;
-            case "black":
-                if (ThemeStore.primaryColor(getApplicationContext()) != getResources().getColor(R.color.md_black_1000)) {
-                    ThemeStore.editTheme(getApplicationContext())
-                            .primaryColorRes(R.color.md_black_1000)
-                            .commit();
-                }
-                break;
-        }
 
-        getSharedPreferences("[[kabouzeid_app-theme-helper]]", 0).edit().putInt("activity_theme", PreferenceUtil.getInstance(this).getGeneralTheme()).commit(); // TEMPORARY FIX
+        getSharedPreferences("[[kabouzeid_app-theme-helper]]", 0).edit().putInt("this_theme", PreferenceUtil.getInstance(this).getGeneralTheme()).apply(); // TEMPORARY FIX
         super.onCreate(savedInstanceState);
         MaterialDialogsUtil.updateMaterialDialogsThemeSingleton(this);
     }
@@ -80,18 +56,18 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
      *
      * @param color the new statusbar color (will be shifted down on Lollipop and above)
      */
-    public void setStatusbarColor(int color) {
+    public void setStatusbarColor(int color, boolean darken) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             final View statusBar = getWindow().getDecorView().getRootView().findViewById(R.id.status_bar);
             if (statusBar != null) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    statusBar.setBackgroundColor(ColorUtil.darkenColor(color));
+                    statusBar.setBackgroundColor(darken ? ColorUtil.darkenColor(color) : color);
                     setLightStatusbarAuto(color);
                 } else {
                     statusBar.setBackgroundColor(color);
                 }
             } else if (Build.VERSION.SDK_INT >= 21) {
-                getWindow().setStatusBarColor(ColorUtil.darkenColor(color));
+                getWindow().setStatusBarColor(darken ? ColorUtil.darkenColor(color) : color);
                 setLightStatusbarAuto(color);
             }
         }
@@ -99,7 +75,8 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
 
     public void setStatusbarColorAuto() {
         // we don't want to use statusbar color because we are doing the color darkening on our own to support KitKat
-        setStatusbarColor(ThemeStore.primaryColor(this));
+        setStatusbarColor(ThemeStore.primaryColor(this), false);
+        setLightStatusbar(ColorUtil.isColorLight(ThemeStore.primaryColor(this)));
     }
 
     public void setTaskDescriptionColor(@ColorInt int color) {
@@ -111,30 +88,35 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
     }
 
     public void setNavigationbarColor(int color) {
+        /*if (ThemeStore.coloredNavigationBar(this)) {
+            ATH.setNavigationbarColor(this, color);
+        } else {
+            ATH.setNavigationbarColor(this, Color.BLACK);
+        }
+        if (Util.isOreo() && ColorUtil.isColorLight(ThemeStore.navigationBarColor(this))) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+        }*/
+
         if (ThemeStore.coloredNavigationBar(this)) {
-            if (ColorUtil.isColorLight(color)) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    View view = new View(this);
-                    /*Window window = getWindow();
-                    window.requestFeature(FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);*/
-                    view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+            if (Util.isLollipop()) {
+                if (Util.isOreo() && ColorUtil.isColorLight(color)) {
+                    this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+                    ATH.setNavigationbarColor(this, color);
                 } else {
-                    ATH.setNavigationbarColor(this, ColorUtil.shiftColor(color, 0.8f));
-                    return;
+                    ATH.setNavigationbarColor(this, ColorUtil.shiftColor(color, 0.9f));
                 }
-                ATH.setNavigationbarColor(this, ColorUtil.shiftColor(color, 0.8f));
-            } else {
-                ATH.setNavigationbarColor(this, color);
             }
         } else {
             ATH.setNavigationbarColor(this, Color.BLACK);
         }
+        
     }
 
     public void setNavigationbarColorAuto() {
         setNavigationbarColor(ThemeStore.navigationBarColor(this));
-    }
-
+    } 
+    
+   
     public void setLightStatusbar(boolean enabled) {
         ATH.setLightStatusbar(this, enabled);
     }

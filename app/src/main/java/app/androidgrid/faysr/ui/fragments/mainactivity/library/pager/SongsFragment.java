@@ -6,14 +6,17 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.GridLayoutManager;
+import android.view.View;
 
 import app.androidgrid.faysr.R;
+import app.androidgrid.faysr.adapter.song.QuickActionSongAdapter;
 import app.androidgrid.faysr.adapter.song.ShuffleButtonSongAdapter;
 import app.androidgrid.faysr.adapter.song.SongAdapter;
 import app.androidgrid.faysr.interfaces.LoaderIds;
 import app.androidgrid.faysr.loader.SongLoader;
 import app.androidgrid.faysr.misc.WrappedAsyncTaskLoader;
 import app.androidgrid.faysr.model.Song;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.LibraryFragment;
 import app.androidgrid.faysr.util.PreferenceUtil;
 
 import java.util.ArrayList;
@@ -40,6 +43,12 @@ public class SongsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFrag
         getLoaderManager().initLoader(LOADER_ID, null, this);
     }
 
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        LibraryFragment.setToolbarTitle(getString(R.string.library));
+    }
+
     @NonNull
     @Override
     protected GridLayoutManager createLayoutManager() {
@@ -55,7 +64,7 @@ public class SongsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFrag
         ArrayList<Song> dataSet = getAdapter() == null ? new ArrayList<Song>() : getAdapter().getDataSet();
 
         if (getGridSize() <= getMaxGridSizeForList()) {
-            return new ShuffleButtonSongAdapter(
+            return new QuickActionSongAdapter(
                     getLibraryFragment().getMainActivity(),
                     dataSet,
                     itemLayoutRes,

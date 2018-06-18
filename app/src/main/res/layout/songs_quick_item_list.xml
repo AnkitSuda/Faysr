@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/quick0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:tooltipText="@string/action_shuffle_all"
+            android:tint="?colorAccent"
+            android:background="?attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_shuffle_white_24dp" />
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/quick1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:clickable="true"
+            android:tooltipText="@string/play_last_added"
+            android:tint="?colorAccent"
+            android:background="?attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_library_add_white_24dp" />
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/quick2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:clickable="true"
+            android:tooltipText="@string/play_top_tracks"
+            android:tint="?colorAccent"
+            android:background="?attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_trending_up_white_24dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="?attr/dividerColor"
+        android:visibility="visible" />
+
+
+
+</FrameLayout>

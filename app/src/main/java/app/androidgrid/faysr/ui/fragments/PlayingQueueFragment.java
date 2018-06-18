@@ -14,12 +14,19 @@ import android.view.ViewGroup;
 
 import com.h6ah4i.android.widget.advrecyclerview.animator.GeneralItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.animator.RefactoredDefaultItemAnimator;
+import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager;
 import com.h6ah4i.android.widget.advrecyclerview.utils.WrapperAdapterUtils;
+import com.kabouzeid.appthemehelper.ThemeStore;
+import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
+
+import java.util.ArrayList;
 
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.adapter.song.PlayingQueueAdapter;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
+import app.androidgrid.faysr.model.Song;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.SongsFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -30,12 +37,14 @@ import butterknife.Unbinder;
 
 public class PlayingQueueFragment extends AbsMusicServiceFragment {
     @BindView(R.id.recycler_view)
-    RecyclerView mRecyclerView;
+    FastScrollRecyclerView mRecyclerView;
     Unbinder unbinder;
     private RecyclerView.Adapter mWrappedAdapter;
     private RecyclerViewDragDropManager mRecyclerViewDragDropManager;
     private PlayingQueueAdapter mPlayingQueueAdapter;
     private LinearLayoutManager mLayoutManager;
+
+    public ArrayList<Song> arrayList;
 
     @Nullable
     @Override
@@ -55,13 +64,16 @@ public class PlayingQueueFragment extends AbsMusicServiceFragment {
         mRecyclerViewDragDropManager = new RecyclerViewDragDropManager();
         final GeneralItemAnimator animator = new RefactoredDefaultItemAnimator();
 
+        arrayList = MusicPlayerRemote.getPlayingQueue();
+
         mPlayingQueueAdapter = new PlayingQueueAdapter(
                 (AppCompatActivity) getActivity(),
-                MusicPlayerRemote.getPlayingQueue(),
+                arrayList,
                 MusicPlayerRemote.getPosition(),
                 R.layout.item_list,
                 false,
                 null);
+
         mWrappedAdapter = mRecyclerViewDragDropManager.createWrappedAdapter(mPlayingQueueAdapter);
 
         mLayoutManager = new LinearLayoutManager(getContext());
@@ -69,6 +81,8 @@ public class PlayingQueueFragment extends AbsMusicServiceFragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mWrappedAdapter);
         mRecyclerView.setItemAnimator(animator);
+
+        mRecyclerView.setThumbColor(ThemeStore.accentColor(getActivity()));
 
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override

@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:windowBackground"
     android:id="@+id/root"
+    android:orientation="vertical"
     tools:context=".ui.activities.SupportDevelopmentActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
-        android:background="?colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <include layout="@layout/status_bar" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:background="?colorPrimary"
-            app:layout_collapseMode="pin"
-            app:navigationIcon="@drawable/ic_close_white_24dp"
-            app:title="@string/support_development" />
-
-    </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        android:background="@android:color/transparent" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -34,6 +25,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/free_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="@dimen/ate_default_textsize_title"
+                        android:textColor="?attr/colorAccent"
+                        android:text="@string/free_forever"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?android:textColorSecondary"
+                        android:text="@string/free_forever_summary"/>
+                </LinearLayout>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_gravity="top"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="?android:textColorSecondaryInverse"
+                    android:src="@drawable/donation_vector"/>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/donation"
@@ -84,4 +110,4 @@
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

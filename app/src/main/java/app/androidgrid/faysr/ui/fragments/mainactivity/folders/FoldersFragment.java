@@ -12,6 +12,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.LinearLayoutManager;
@@ -176,6 +177,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         int primaryColor = ThemeStore.primaryColor(getActivity());
         appbar.setBackgroundColor(primaryColor);
         toolbar.setBackgroundColor(primaryColor);
+        breadCrumbs.setBackgroundColor(primaryColor);
         breadCrumbs.setActivatedContentColor(ToolbarContentTintHelper.toolbarTitleColor(getActivity(), primaryColor));
         breadCrumbs.setDeactivatedContentColor(ToolbarContentTintHelper.toolbarSubtitleColor(getActivity(), primaryColor));
     }
@@ -237,6 +239,8 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         return false;
     }
 
+
+
     @NonNull
     @Override
     public MaterialCab openCab(int menuRes, MaterialCab.Callback callback) {
@@ -261,6 +265,10 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         super.onPrepareOptionsMenu(menu);
         ToolbarContentTintHelper.handleOnPrepareOptionsMenu(getActivity(), toolbar);
     }
+
+    public static final FileFilter AUDIO_FILE_FILTER = file -> !file.isHidden() && (file.isDirectory() ||
+            FileUtil.fileIsMimeType(file, "audio/*", MimeTypeMap.getSingleton()) ||
+            FileUtil.fileIsMimeType(file, "application/ogg", MimeTypeMap.getSingleton()));
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -628,7 +636,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         }
     }
 
-    private static class ListPathsAsyncTask extends ListingFilesDialogAsyncTask<ListPathsAsyncTask.LoadingInfo, String, String[]> {
+    public static class ListPathsAsyncTask extends ListingFilesDialogAsyncTask<ListPathsAsyncTask.LoadingInfo, String, String[]> {
         private WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
 
         public ListPathsAsyncTask(Context context, OnPathsListedCallback callback) {

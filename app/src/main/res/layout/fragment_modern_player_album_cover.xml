@@ -31,7 +31,7 @@
     <ImageView
         android:id="@+id/modern_player_art_shadow"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_gravity="bottom"
         android:src="@drawable/bg_shadow_hard"/>
 

@@ -38,18 +38,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <fragment
-                    android:id="@+id/player_album_cover_fragment"
-                    class="app.androidgrid.faysr.ui.fragments.player.modern.ModernPlayerAlbumCoverFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
 
-                <app.androidgrid.faysr.views.WidthFitSquareLayout
+
+                <FrameLayout
                     android:id="@+id/album_cover_container"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
-                </app.androidgrid.faysr.views.WidthFitSquareLayout>
+                    <fragment
+                        android:id="@+id/player_album_cover_fragment"
+                        class="app.androidgrid.faysr.ui.fragments.player.modern.ModernPlayerAlbumCoverFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
 
             </FrameLayout>
 

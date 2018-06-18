@@ -3,6 +3,7 @@ package app.androidgrid.faysr.ui.activities;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -18,8 +19,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +38,7 @@ import com.kabouzeid.appthemehelper.util.NavigationViewUtil;
 import app.androidgrid.faysr.BuildConfig;
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.dialogs.ChangelogDialog;
+import app.androidgrid.faysr.dialogs.ScanMediaFolderChooserDialog;
 import app.androidgrid.faysr.glide.SongGlideRequest;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.helper.SearchQueryHelper;
@@ -49,12 +49,10 @@ import app.androidgrid.faysr.loader.PlaylistSongLoader;
 import app.androidgrid.faysr.model.Song;
 import app.androidgrid.faysr.service.MusicService;
 import app.androidgrid.faysr.ui.activities.base.AbsSlidingMusicPanelActivity;
-import app.androidgrid.faysr.ui.activities.intro.AppIntroActivity;
 import app.androidgrid.faysr.ui.activities.under_development.UnderDevelopmentActivity;
 import app.androidgrid.faysr.ui.fragments.mainactivity.folders.FoldersFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.LibraryFragment;
-import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.AlbumsFragment;
-import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.ArtistsFragment;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.creators.CreatorsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.PlaylistsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.SongsFragment;
 import app.androidgrid.faysr.ui.fragments.mainactivity.home.HomeFragment;
@@ -69,6 +67,7 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.reactivex.Observable;
+import io.reactivex.disposables.CompositeDisposable;
 
 public class MainActivity extends AbsSlidingMusicPanelActivity {
 
@@ -82,12 +81,8 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     public static final int APP_INTRO_REQUEST = 100;
     public static final int PURCHASE_REQUEST = 101;
 
-    private static final int HOME = 0;
-    private static final int LIBRARY = 1;
-    private static final int FOLDERS = 2;
-
-    @Nullable
-    LibraryTabSelectedItem mTabSelectedItem;
+    private static final int LIBRARY = 0;
+    private static final int FOLDERS = 1;
 
     @BindView(R.id.navigation_view)
     NavigationView navigationView;
@@ -101,13 +96,12 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     private View navigationDrawerHeader;
 
     private boolean blockRequestPermissions;
+    private CompositeDisposable disposable = new CompositeDisposable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
-
-
 
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
             Util.setStatusBarTranslucent(getWindow());
@@ -125,17 +119,23 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                 }
             });
         }
-        setUpRemoteConfig();
+
         setUpDrawerLayout();
 
         if (savedInstanceState == null) {
-            int defaultPage = PreferenceUtil.getInstance(this).getDefaultStartPage();
+           /* int defaultPage = PreferenceUtil.getInstance(this).getDefaultStartPage();
             Log.i("DefaultPage", String.valueOf(defaultPage));
 
-            if (String.valueOf(defaultPage).equals("-1")) {
+            if (String.valueOf(defaultPage).equals("9")) {
                 setMusicChooser(PreferenceUtil.getInstance(this).getLastMusicChooser());
-            } else if (defaultPage >= 0){
+            } else {
                 setMusicChooser(PreferenceUtil.getInstance(this).getDefaultStartPage());
+            }*/
+            int m = PreferenceUtil.getInstance(this).getLastMusicChooser();
+            setMusicChooser(m);
+            if (m == LIBRARY) {
+                getBottomNavigationView().setSelectedItemId(PreferenceUtil.getInstance(this).getLastPage());
+                setCurrentFragment(PreferenceUtil.getInstance(this).getLastPage());
             }
         } else {
             restoreCurrentFragment();
@@ -144,82 +144,73 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         if (!checkShowIntro()) {
             checkShowChangelog();
         }
+
+        getBottomNavigationView().setOnNavigationItemSelectedListener(this);
     }
 
     private void setMusicChooser(int key) {
-//        if (!App.isProVersion() && key == FOLDERS) {
-//            Toast.makeText(this, R.string.folder_view_is_a_pro_feature, Toast.LENGTH_LONG).show();
-//            startActivityForResult(new Intent(this, PurchaseActivity.class), PURCHASE_REQUEST);
-//            key = LIBRARY;
-//        }
-
         PreferenceUtil.getInstance(this).setLastMusicChooser(key);
+
         switch (key) {
-            case HOME:
+            /*case HOME:
                 navigationView.setCheckedItem(R.id.nav_home);
-                setCurrentFragment(HomeFragment.newInstance());
-                break;
+                setCurrentFragment(HomeFragment.newInstance(), false);
+                break;*/
             case LIBRARY:
                 navigationView.setCheckedItem(R.id.nav_library);
-                setCurrentFragment(LibraryFragment.newInstance());
+                setCurrentFragment(LibraryFragment.newInstance(key), false);
                 break;
             case FOLDERS:
                 navigationView.setCheckedItem(R.id.nav_folders);
-                setCurrentFragment(FoldersFragment.newInstance(this));
+                setCurrentFragment(FoldersFragment.newInstance(this), false);
                 break;
         }
     }
 
-    private void setCurrentFragment(@SuppressWarnings("NullableProblems") Fragment fragment) {
-        try {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fragment, TAG);
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        disposable.clear();
+    }
 
-            fragmentTransaction.commit();
 
-            currentFragment = (MainActivityFragmentCallbacks) fragment;
-
-            if (fragment instanceof LibraryTabSelectedItem) {
-                mTabSelectedItem = (LibraryTabSelectedItem) fragment;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+    public void setCurrentFragment(@Nullable Fragment fragment, boolean isStackAdd) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, fragment, TAG);
+        if (isStackAdd) {
+            fragmentTransaction.addToBackStack(TAG);
         }
+        fragmentTransaction.commit();
+        currentFragment = (MainActivityFragmentCallbacks) fragment;
     }
 
     private void restoreCurrentFragment() {
-        if (getSupportFragmentManager().findFragmentById(R.id.fragment_container) instanceof LibraryTabSelectedItem) {
-            mTabSelectedItem = (LibraryTabSelectedItem) getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-        }
-        currentFragment = (MainActivityFragmentCallbacks) getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        currentFragment = (MainActivityFragmentCallbacks) getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_container);
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         PreferenceUtil.getInstance(this).setLastPage(item.getItemId());
-        Observable.just(item)
+        disposable.add(Observable.just(item.getItemId())
                 .throttleFirst(3, TimeUnit.SECONDS)
-                .subscribe(menuItem -> {
-                    if (mTabSelectedItem != null) {
-                        switch (menuItem.getItemId()) {
-                            default:
-                            case R.id.action_song:
-                                mTabSelectedItem.selectedFragment(SongsFragment.newInstance());
-                                break;
-                            case R.id.action_album:
-                                mTabSelectedItem.selectedFragment(AlbumsFragment.newInstance());
-                                break;
-                            case R.id.action_artist:
-                                mTabSelectedItem.selectedFragment(ArtistsFragment.newInstance());
-                                break;
-                            case R.id.action_playlist:
-                                mTabSelectedItem.selectedFragment(PlaylistsFragment.newInstance());
-                                break;
-                        }
-                    }
-                });
+                .subscribe(this::setCurrentFragment));
         return true;
+    }
+
+    private void setCurrentFragment(int menuItem) {
+        switch (menuItem) {
+            default:
+            case R.id.action_song:
+            case R.id.action_creators:
+            case R.id.action_playlist:
+                setCurrentFragment(LibraryFragment.newInstance(menuItem), false);
+                break;
+            case R.id.action_home:
+                setCurrentFragment(HomeFragment.newInstance(), false);
+                break;
+        }
     }
 
     @Override
@@ -260,14 +251,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 drawerLayout.closeDrawers();
                 switch (menuItem.getItemId()) {
-                    case R.id.nav_home:
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                setMusicChooser(HOME);
-                            }
-                        }, 200);
-                        break;
                     case R.id.nav_library:
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -282,6 +265,12 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                             public void run() {
                                 setMusicChooser(FOLDERS);
                             }
+                        }, 200);
+                        break;
+                    case R.id.nav_scan:
+                        new Handler().postDelayed(() -> {
+                            ScanMediaFolderChooserDialog dialog = ScanMediaFolderChooserDialog.create();
+                            dialog.show(getSupportFragmentManager(), "SCAN_MEDIA_FOLDER_CHOOSER");
                         }, 200);
                         break;
                     case R.id.nav_settings:
@@ -380,7 +369,8 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             drawerLayout.closeDrawers();
             return true;
         }
-        return super.handleBackPress() || (currentFragment != null && currentFragment.handleBackPress());
+        return super.handleBackPress() || (currentFragment != null &&
+                currentFragment.handleBackPress());
     }
 
     private void handlePlaybackIntent(@Nullable Intent intent) {
@@ -466,13 +456,13 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         if (!PreferenceUtil.getInstance(this).introShown()) {
             PreferenceUtil.getInstance(this).setIntroShown();
             ChangelogDialog.setChangelogRead(this);
-            blockRequestPermissions = true;
+           /* blockRequestPermissions = true;
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     startActivityForResult(new Intent(MainActivity.this, AppIntroActivity.class), APP_INTRO_REQUEST);
                 }
-            }, 50);
+            }, 50);*/
             return true;
         }
         return false;
@@ -495,6 +485,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     public interface MainActivityFragmentCallbacks {
         boolean handleBackPress();
     }
+
     private void setUpRemoteConfig() {
         // Get Remote Config instance.
         // [START get_remote_config_instance]

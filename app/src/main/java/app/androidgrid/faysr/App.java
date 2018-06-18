@@ -52,7 +52,6 @@ public class App extends Application {
         super.onCreate();
         app = this;
 
-
         setUpRemoteConfig();
 
         // Set up dynamic shortcuts

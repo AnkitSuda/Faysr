@@ -6,6 +6,7 @@ import android.support.annotation.StringRes;
 import app.androidgrid.faysr.R;
 
 public enum NowPlayingScreen {
+   /* EXPLORE(R.string.explore, R.drawable.np_modern, 0),*/
     MODERN(R.string.modern, R.drawable.np_modern, 0),
     FLAT(R.string.flat, R.drawable.np_flat, 1),
     Minimal(R.string.minimal, R.drawable.np_minimal, 2),

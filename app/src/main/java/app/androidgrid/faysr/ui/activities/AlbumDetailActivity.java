@@ -141,7 +141,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
             // Change alpha of overlay
             toolbarAlpha = Math.max(0, Math.min(1, (float) scrollY / flexibleRange));
             toolbar.setBackgroundColor(ColorUtil.withAlpha(toolbarColor, toolbarAlpha));
-            setStatusbarColor(ColorUtil.withAlpha(toolbarColor, cab != null && cab.isActive() ? 1 : toolbarAlpha));
+            setStatusbarColor(ColorUtil.withAlpha(toolbarColor, cab != null && cab.isActive() ? 1 : toolbarAlpha), false);
 
             // Translate name text
             int maxTitleTranslationY = albumArtViewHeight;
@@ -384,7 +384,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
                 .start(new MaterialCab.Callback() {
                     @Override
                     public boolean onCabCreated(MaterialCab materialCab, Menu menu) {
-                        setStatusbarColor(ColorUtil.stripAlpha(toolbarColor));
+                        setStatusbarColor(ColorUtil.stripAlpha(toolbarColor), false);
                         return callback.onCabCreated(materialCab, menu);
                     }
 
@@ -395,7 +395,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
 
                     @Override
                     public boolean onCabFinished(MaterialCab materialCab) {
-                        setStatusbarColor(ColorUtil.withAlpha(toolbarColor, toolbarAlpha));
+                        setStatusbarColor(ColorUtil.withAlpha(toolbarColor, toolbarAlpha), false);
                         return callback.onCabFinished(materialCab);
                     }
                 });
@@ -418,8 +418,8 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
     }
 
     @Override
-    public void setStatusbarColor(int color) {
-        super.setStatusbarColor(color);
+    public void setStatusbarColor(int color, boolean darken) {
+        super.setStatusbarColor(color, false);
         setLightStatusbar(false);
     }
 

@@ -10,6 +10,8 @@ import app.androidgrid.faysr.glide.palette.BitmapPaletteTarget;
 import app.androidgrid.faysr.glide.palette.BitmapPaletteWrapper;
 import app.androidgrid.faysr.util.FaysrColorUtil;
 
+import static app.androidgrid.faysr.util.FaysrColorUtil.getColor;
+
 public abstract class FaysrColoredTarget extends BitmapPaletteTarget {
     public FaysrColoredTarget(ImageView view) {
         super(view);
@@ -24,7 +26,10 @@ public abstract class FaysrColoredTarget extends BitmapPaletteTarget {
     @Override
     public void onResourceReady(BitmapPaletteWrapper resource, GlideAnimation<? super BitmapPaletteWrapper> glideAnimation) {
         super.onResourceReady(resource, glideAnimation);
-        onColorReady(FaysrColorUtil.getColor(resource.getPalette(), getDefaultFooterColor()));
+        int defaultColor = getDefaultFooterColor();
+        int primaryColor = getColor(resource.getPalette(), defaultColor);
+
+        onColorReady(getColor(resource.getPalette(), primaryColor));
     }
 
     protected int getDefaultFooterColor() {

@@ -5,10 +5,6 @@
         android:id="@+id/navigation_drawer_menu_category_sections"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_white_24dp"
-            android:title="@string/home" />
-        <item
             android:id="@+id/nav_library"
             android:icon="@drawable/ic_library_music_white_24dp"
             android:title="@string/library" />
@@ -16,6 +12,15 @@
             android:id="@+id/nav_folders"
             android:icon="@drawable/ic_folder_white_24dp"
             android:title="@string/folders" />
+    </group>
+
+    <group
+        android:id="@+id/navigation_drawer_menu_category_scan"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_scanner_white_24dp"
+            android:title="@string/action_scan_media" />
     </group>
 
     <group

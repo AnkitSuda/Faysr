@@ -24,6 +24,7 @@ import com.afollestad.materialdialogs.color.ColorChooserDialog;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEColorPreference;
 import com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceFragmentCompat;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import app.androidgrid.faysr.App;
 import app.androidgrid.faysr.R;
@@ -76,29 +77,12 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
     public void onColorSelection(@NonNull ColorChooserDialog dialog, @ColorInt int selectedColor) {
         switch (dialog.getTitle()) {
             case R.string.primary_color:
-//                if (!App.isProVersion()) {
-//                    Arrays.sort(NonProAllowedColors.PRIMARY_COLORS);
-//                    if (Arrays.binarySearch(NonProAllowedColors.PRIMARY_COLORS, selectedColor) < 0) {
-//                        // color wasn't found
-//                        Toast.makeText(this, R.string.only_the_first_5_colors_available, Toast.LENGTH_LONG).show();
-//                        startActivity(new Intent(this, PurchaseActivity.class));
-//                        return;
-//                    }
-//                }
                 ThemeStore.editTheme(this)
                         .primaryColor(selectedColor)
                         .commit();
                 break;
             case R.string.accent_color:
-//                if (!App.isProVersion()) {
-//                    Arrays.sort(NonProAllowedColors.ACCENT_COLORS);
-//                    if (Arrays.binarySearch(NonProAllowedColors.ACCENT_COLORS, selectedColor) < 0) {
-//                        // color wasn't found
-//                        Toast.makeText(this, R.string.only_the_first_5_colors_available, Toast.LENGTH_LONG).show();
-//                        startActivity(new Intent(this, PurchaseActivity.class));
-//                        return;
-//                    }
-//                }
+
                 ThemeStore.editTheme(this)
                         .accentColor(selectedColor)
                         .commit();
@@ -186,7 +170,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
         }
 
         private void invalidateSettings() {
-            final Preference defaultStartPage = findPreference("default_start_page");
+          /*  final Preference defaultStartPage = findPreference("default_start_page");
             setSummary(defaultStartPage);
             defaultStartPage.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
@@ -194,7 +178,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                     setSummary(defaultStartPage, o);
                     return true;
                 }
-            });
+            });*/
 
             final Preference generalTheme = findPreference("general_theme");
             setSummary(generalTheme);
@@ -202,17 +186,32 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                 @Override
                 public boolean onPreferenceChange(Preference preference, @NonNull Object o) {
                     String themeName = (String) o;
-//                    if (themeName.equals("black") && !App.isProVersion()) {
-//                        Toast.makeText(getActivity(), R.string.black_theme_is_a_pro_feature, Toast.LENGTH_LONG).show();
-//                        startActivity(new Intent(getContext(), PurchaseActivity.class));
-//                        return false;
-//                    }
 
-                    int theme = PreferenceUtil.getThemeResFromPrefValue(themeName);
+                    String theme = (String) o;
                     setSummary(generalTheme, o);
-                    ThemeStore.editTheme(getActivity())
-                            .activityTheme(theme)
-                            .commit();
+
+                    // Setting custom primary color (Just in case)
+                    switch (themeName) {
+                        case "light":
+                            ThemeStore.editTheme(getActivity())
+                                    .activityTheme(PreferenceUtil.getThemeResFromPrefValue(theme))
+                                    .primaryColorRes(R.color.md_white_1000)
+                                    .commit();
+                            break;
+                        case "dark":
+
+                            ThemeStore.editTheme(getActivity())
+                                    .activityTheme(PreferenceUtil.getThemeResFromPrefValue(theme))
+                                    .primaryColorRes(R.color.md_grey_900)
+                                    .commit();
+                            break;
+                        case "black":
+                            ThemeStore.editTheme(getActivity())
+                                    .activityTheme(PreferenceUtil.getThemeResFromPrefValue(theme))
+                                    .primaryColorRes(R.color.md_black_1000)
+                                    .commit();
+                            break;
+                    }
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
                         // Set the new theme so that updateAppShortcuts can pull it
@@ -246,7 +245,7 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                             .allowUserColorInput(true)
                             .allowUserColorInputAlpha(false)
                             .preselect(accentColor)
-                            .show();
+                            .show(getFragmentManager());
                     return true;
                 }
             });

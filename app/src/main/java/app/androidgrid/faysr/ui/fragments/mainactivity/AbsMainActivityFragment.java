@@ -30,11 +30,12 @@ public abstract class AbsMainActivityFragment extends Fragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             final View statusBar = view.findViewById(R.id.status_bar);
             if (statusBar != null) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
                     statusBar.setBackgroundColor(ColorUtil.darkenColor(color));
                     getMainActivity().setLightStatusbarAuto(color);
-                } else {
+                } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                     statusBar.setBackgroundColor(color);
+                    getMainActivity().setLightStatusbarAuto(color);
                 }
             }
         }

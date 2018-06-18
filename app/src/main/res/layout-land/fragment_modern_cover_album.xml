@@ -5,6 +5,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/transparent">
 
+    <app.androidgrid.faysr.views.CircleAlbumImageView
+        android:id="@+id/modern_player_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        app:civ_border_color="@color/md_white_1000"
+        app:civ_border_width="4dp"
+        android:src="@drawable/default_album_art"/>
+
+<!--
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,15 +23,7 @@
         android:orientation="vertical">
 
 
-        <app.androidgrid.faysr.views.CircleAlbumImageView
-            android:id="@+id/modern_player_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            app:civ_border_color="@color/md_white_1000"
-            app:civ_border_width="4dp"
-            android:src="@drawable/default_album_art"/>
+
 
 
         <TextView
@@ -54,5 +57,6 @@
             android:visibility="gone" />
 
     </LinearLayout>
+-->
 
 </FrameLayout>

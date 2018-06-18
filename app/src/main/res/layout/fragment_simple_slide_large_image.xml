@@ -19,7 +19,7 @@
         android:gravity="center"
         app:layout_parallaxFactor="0.75"
         tools:ignore="ContentDescription"
-        tools:src="@drawable/tutorial_queue_swipe_up" />
+         />
 
     <TextView
         android:id="@id/mi_title"

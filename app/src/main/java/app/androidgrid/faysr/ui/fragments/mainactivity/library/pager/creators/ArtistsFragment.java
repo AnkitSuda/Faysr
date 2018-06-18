@@ -1,4 +1,4 @@
-package app.androidgrid.faysr.ui.fragments.mainactivity.library.pager;
+package app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.creators;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import app.androidgrid.faysr.interfaces.LoaderIds;
 import app.androidgrid.faysr.loader.ArtistLoader;
 import app.androidgrid.faysr.misc.WrappedAsyncTaskLoader;
 import app.androidgrid.faysr.model.Artist;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.AbsLibraryPagerRecyclerViewCustomGridSizeFragment;
 import app.androidgrid.faysr.util.PreferenceUtil;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
-public class ArtistsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<ArtistAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Artist>> {
+public class ArtistsFragment extends AbsCreatorsPagerRecyclerViewCustomGridSizeFragment<ArtistAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Artist>> {
 
     public static final String TAG = ArtistsFragment.class.getSimpleName();
 
@@ -55,11 +56,11 @@ public class ArtistsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFr
         notifyLayoutResChanged(itemLayoutRes);
         ArrayList<Artist> dataSet = getAdapter() == null ? new ArrayList<Artist>() : getAdapter().getDataSet();
         return new ArtistAdapter(
-                getLibraryFragment().getMainActivity(),
+                getCreatorsFragment().getMainActivity(),
                 dataSet,
                 itemLayoutRes,
                 loadUsePalette(),
-                getLibraryFragment());
+                getCreatorsFragment());
     }
 
     @Override

@@ -5,15 +5,19 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import app.androidgrid.faysr.R;
+import app.androidgrid.faysr.dialogs.base.AbsRoundedBottomSheetDialogFragment;
 import app.androidgrid.faysr.model.Song;
 import app.androidgrid.faysr.util.MusicUtil;
 
@@ -31,7 +35,7 @@ import java.io.IOException;
 /**
  * @author Karim Abou Zeid (kabouzeid), Aidan Follestad (afollestad)
  */
-public class SongDetailDialog extends DialogFragment {
+public class SongDetailDialog extends AbsRoundedBottomSheetDialogFragment {
 
     public static final String TAG = SongDetailDialog.class.getSimpleName();
 
@@ -54,7 +58,7 @@ public class SongDetailDialog extends DialogFragment {
         return fileSizeInMB + " MB";
     }
 
-    @NonNull
+   /* @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Activity context = getActivity();
@@ -103,5 +107,44 @@ public class SongDetailDialog extends DialogFragment {
             Log.e(TAG, "error while reading the song file", e);
         }
         return dialog;
+    }
+*/
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        final Activity context = getActivity();
+        final Song song = getArguments().getParcelable("song");
+
+        View dialogView = View.inflate(context, R.layout.dialog_file_details, null);
+
+
+        final TextView fileName = (TextView) dialogView.findViewById(R.id.file_name);
+        final TextView filePath = (TextView) dialogView.findViewById(R.id.file_path);
+        final TextView fileSize = (TextView) dialogView.findViewById(R.id.file_size);
+        final TextView fileFormat = (TextView) dialogView.findViewById(R.id.file_format);
+        final TextView trackLength = (TextView) dialogView.findViewById(R.id.track_length);
+        final TextView bitRate = (TextView) dialogView.findViewById(R.id.bitrate);
+        final TextView samplingRate = (TextView) dialogView.findViewById(R.id.sampling_rate);
+
+        try {
+            if (song != null) {
+                final File songFile = new File(song.data);
+                if (songFile.exists()) {
+                    AudioFile audioFile = AudioFileIO.read(songFile);
+                    AudioHeader audioHeader = audioFile.getAudioHeader();
+
+                    fileName.setText(makeTextWithTitle(context, R.string.label_file_name, songFile.getName()));
+                    filePath.setText(makeTextWithTitle(context, R.string.label_file_path, songFile.getAbsolutePath()));
+                    fileSize.setText(makeTextWithTitle(context, R.string.label_file_size, getFileSizeString(songFile.length())));
+                    fileFormat.setText(makeTextWithTitle(context, R.string.label_file_format, audioHeader.getFormat()));
+                    trackLength.setText(makeTextWithTitle(context, R.string.label_track_length, MusicUtil.getReadableDurationString(audioHeader.getTrackLength() * 1000)));
+                    bitRate.setText(makeTextWithTitle(context, R.string.label_bit_rate, audioHeader.getBitRate() + " kb/s"));
+                    samplingRate.setText(makeTextWithTitle(context, R.string.label_sampling_rate, audioHeader.getSampleRate() + " Hz"));
+                }
+            }
+        } catch (@NonNull CannotReadException | IOException | TagException | ReadOnlyFileException | InvalidAudioFrameException e) {
+            Log.e(TAG, "error while reading the song file", e);
+        }
+
+        return dialogView;
     }
 }

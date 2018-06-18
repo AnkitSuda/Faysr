@@ -16,6 +16,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -57,8 +58,10 @@ public class SupportDevelopmentActivity extends AbsBaseActivity implements Billi
     RecyclerView mListView;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @BindView(R.id.app_bar)
-    AppBarLayout mAppBarLayout;
+    @BindView(R.id.free_title)
+    TextView txtFree;
+    @BindView(R.id.donation)
+    TextView txtDonation;
     @BindView(R.id.root)
     ViewGroup mViewGroup;
     private BillingProcessor mBillingProcessor;
@@ -91,22 +94,35 @@ public class SupportDevelopmentActivity extends AbsBaseActivity implements Billi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support_development);
+        setDrawUnderStatusbar(true);
         ButterKnife.bind(this);
-
 
         setStatusbarColorAuto();
         setNavigationbarColorAuto();
         setTaskDescriptionColorAuto();
 
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        mToolbar.setNavigationOnClickListener(view -> onBackPressed());
+        setUpToolbar();
 
         mBillingProcessor
                 = new BillingProcessor(this, BuildConfig.GOOGLE_PLAY_LICENSE_KEY, this);
         MDTintHelper.setTint(mProgressBar, ThemeStore.accentColor(this));
 
-        ((TextView) findViewById(R.id.donation)).setTextColor(ThemeStore.accentColor(this));
+        txtDonation.setTextColor(ThemeStore.accentColor(this));
+        txtFree.setTextColor(ThemeStore.accentColor(this));
+    }
+
+    private void setUpToolbar() {
+        mToolbar.setBackgroundColor(ThemeStore.primaryColor(this));
+        setSupportActionBar(mToolbar);
+        //noinspection ConstantConditions
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+        finish();
+        return true;
     }
 
     @Override
@@ -259,7 +275,7 @@ public class SupportDevelopmentActivity extends AbsBaseActivity implements Billi
         public void onBindViewHolder(ViewHolder viewHolder, int i) {
             SkuDetails skuDetails = skuDetailsList.get(i);
             if (skuDetails != null) {
-                viewHolder.title.setText(skuDetails.title.replace("(Faysr Player)", "").trim());
+                viewHolder.title.setText(skuDetails.title.replace("(Faysr Music Player - Explore Your Library Ad Free)", "").trim());
                 viewHolder.text.setText(skuDetails.description);
                 viewHolder.text.setVisibility(View.GONE);
                 viewHolder.price.setText(skuDetails.priceText);

@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemViewHolder;
@@ -15,6 +16,7 @@ import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.helper.MusicPlayerRemote;
 import app.androidgrid.faysr.interfaces.CabHolder;
 import app.androidgrid.faysr.model.Song;
+import app.androidgrid.faysr.util.Util;
 import app.androidgrid.faysr.util.ViewUtil;
 
 import java.util.ArrayList;
@@ -43,6 +45,15 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
     @Override
     public void onBindViewHolder(@NonNull SongAdapter.ViewHolder holder, int position) {
         super.onBindViewHolder(holder, position);
+        if (holder.itemRoot != null) {
+            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) holder.itemRoot.getLayoutParams();
+            if (position == getItemCount() - 1) {
+                params.setMargins(0, 0, 0, activity.getResources().getDimensionPixelSize(R.dimen.queue_last_item_margin));
+            } else {
+                params.setMargins(0, 0, 0, 0);
+            }
+            holder.itemRoot.setLayoutParams(params);
+        }
         if (holder.imageText != null) {
             holder.imageText.setText(String.valueOf(position - current));
         }
@@ -75,6 +86,11 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
     public void setCurrent(int current) {
         this.current = current;
         notifyDataSetChanged();
+    }
+
+    @Override
+    public int getItemCount() {
+        return super.getItemCount();
     }
 
     protected void setAlpha(SongAdapter.ViewHolder holder, float alpha) {
@@ -136,6 +152,9 @@ public class PlayingQueueAdapter extends SongAdapter implements DraggableItemAda
             }
             if (image != null) {
                 image.setVisibility(View.GONE);
+            }
+            if (dragView != null) {
+                dragView.setVisibility(View.VISIBLE);
             }
         }
 

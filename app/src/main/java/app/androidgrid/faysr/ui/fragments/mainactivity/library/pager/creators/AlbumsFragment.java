@@ -1,4 +1,4 @@
-package app.androidgrid.faysr.ui.fragments.mainactivity.library.pager;
+package app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.creators;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import app.androidgrid.faysr.interfaces.LoaderIds;
 import app.androidgrid.faysr.loader.AlbumLoader;
 import app.androidgrid.faysr.misc.WrappedAsyncTaskLoader;
 import app.androidgrid.faysr.model.Album;
+import app.androidgrid.faysr.ui.fragments.mainactivity.library.pager.AbsLibraryPagerRecyclerViewCustomGridSizeFragment;
 import app.androidgrid.faysr.util.PreferenceUtil;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
-public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<AlbumAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Album>> {
+public class AlbumsFragment extends AbsCreatorsPagerRecyclerViewCustomGridSizeFragment<AlbumAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Album>> {
     public static final String TAG = AlbumsFragment.class.getSimpleName();
 
     private static final int LOADER_ID = LoaderIds.ALBUMS_FRAGMENT;
@@ -50,11 +51,11 @@ public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFra
         notifyLayoutResChanged(itemLayoutRes);
         ArrayList<Album> dataSet = getAdapter() == null ? new ArrayList<Album>() : getAdapter().getDataSet();
         return new AlbumAdapter(
-                getLibraryFragment().getMainActivity(),
+                getCreatorsFragment().getMainActivity(),
                 dataSet,
                 itemLayoutRes,
                 loadUsePalette(),
-                getLibraryFragment());
+                getCreatorsFragment());
     }
 
     @Override

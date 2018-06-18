@@ -6,11 +6,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import app.androidgrid.faysr.R;
 import app.androidgrid.faysr.dialogs.AddToPlaylistDialog;
 import app.androidgrid.faysr.dialogs.CreatePlaylistDialog;
+import app.androidgrid.faysr.dialogs.DeleteSongsDialog;
 import app.androidgrid.faysr.dialogs.LyricsDialog;
+import app.androidgrid.faysr.dialogs.NowPlayingListDialogFragment;
 import app.androidgrid.faysr.dialogs.SleepTimerDialog;
 import app.androidgrid.faysr.dialogs.SongDetailDialog;
 import app.androidgrid.faysr.dialogs.SongShareDialog;
@@ -25,7 +28,7 @@ import app.androidgrid.faysr.ui.fragments.AbsMusicServiceFragment;
 import app.androidgrid.faysr.util.MusicUtil;
 import app.androidgrid.faysr.util.NavigationUtil;
 
-public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implements Toolbar.OnMenuItemClickListener, PaletteColorHolder {
+public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implements Toolbar.OnMenuItemClickListener, PaletteColorHolder, NowPlayingListDialogFragment.Listener {
     public static final String TAG = AbsPlayerFragment.class.getSimpleName();
 
     private Callbacks callbacks;
@@ -53,6 +56,16 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
     public boolean onMenuItemClick(MenuItem item) {
         final Song song = MusicPlayerRemote.getCurrentSong();
         switch (item.getItemId()) {
+            case R.id.action_delete_from_device:
+                DeleteSongsDialog.create(song)
+                        .show(getActivity().getSupportFragmentManager(), "DELETE_SONGS");
+                return true;
+            case R.id.now_playing:
+                NavigationUtil.goToPlayingQueue(getActivity());
+                return true;
+            case R.id.action_set_as_ringtone:
+                MusicUtil.setRingtone(getActivity(), song.id);
+                return true;
             case R.id.action_sleep_timer:
                 new SleepTimerDialog().show(getFragmentManager(), "SET_SLEEP_TIMER");
                 return true;
@@ -99,8 +112,16 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
                 if (mLyrics != null)
                     LyricsDialog.create(mLyrics).show(getFragmentManager(), "LYRICS");
                 return true;
+            case R.id.action_open_menu:
+                NowPlayingListDialogFragment.create().show(getFragmentManager(), "MENU");
+                return true;
         }
         return false;
+    }
+
+    @Override
+    public void onActionClicked(int position) {
+        Toast.makeText(getActivity(), String.valueOf(position) + " ", Toast.LENGTH_SHORT).show();
     }
 
     protected void toggleFavorite(Song song) {
@@ -121,7 +142,7 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
         setToolbarShown(true);
 
         toolbar.setVisibility(View.VISIBLE);
-        toolbar.animate().alpha(1f).setDuration(PlayerAlbumCoverFragment.VISIBILITY_ANIM_DURATION);
+        //toolbar.animate().alpha(1f).setDuration(PlayerAlbumCoverFragment.VISIBILITY_ANIM_DURATION);
     }
 
     protected void hideToolbar(@Nullable final View toolbar) {
@@ -129,12 +150,13 @@ public abstract class AbsPlayerFragment extends AbsMusicServiceFragment implemen
 
         setToolbarShown(false);
 
-        toolbar.animate().alpha(0f).setDuration(PlayerAlbumCoverFragment.VISIBILITY_ANIM_DURATION).withEndAction(new Runnable() {
+        toolbar.setVisibility(View.GONE);
+       /* toolbar.animate().alpha(0f).setDuration(PlayerAlbumCoverFragment.VISIBILITY_ANIM_DURATION).withEndAction(new Runnable() {
             @Override
             public void run() {
                 toolbar.setVisibility(View.GONE);
             }
-        });
+        });*/
     }
 
     protected void toggleToolbar(@Nullable final View toolbar) {

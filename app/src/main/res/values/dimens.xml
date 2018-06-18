@@ -3,8 +3,12 @@
     <dimen name="default_item_margin">16dp</dimen>
 
     <dimen name="title_view_height">72dp</dimen>
-    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="toolbar_elevation">2dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
+
+    <dimen name="p2p_wifi_info_layout_padding">10dp</dimen>
+    <dimen name="p2p_sender_activity_items_margin">15dp</dimen>
+    <dimen name="p2p_sender_items_count_margin">5dp</dimen>
 
     <!-- 3x standard action bar height (56dp) -->
     <dimen name="toolbar_scrim_height">168dp</dimen>
@@ -66,5 +70,21 @@ http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
 
     <dimen name="card_on_app_bar_side_padding">8dp</dimen>
     <dimen name="mini_player_height_expanded">96dp</dimen>
+
+    <dimen name="card_inner_content_padding">12dp</dimen>
+    <dimen name="card_inner_content_2x_padding">24dp</dimen>
+    <dimen name="card_inner_content_3x_padding">36dp</dimen>
+    <dimen name="card_inner_content_4x_padding">48dp</dimen>
+    <dimen name="card_inner_content_three_halves_padding">18dp</dimen>
+
+    <dimen name="bottom_sheet_corner_radius">16dp</dimen>
+    <dimen name="bottom_sheet_top_padding">8dp</dimen>
+    <dimen name="bottom_sheet_content_padding">16dp</dimen>
+
+    <dimen name="cardview_radius">5dp</dimen>
+
+    <dimen name="queue_last_item_margin">60dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
 
 </resources>
